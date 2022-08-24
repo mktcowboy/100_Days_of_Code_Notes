@@ -1,6 +1,6 @@
 # 100 Days of Code notes
 #### CATEGORIES
-- [Hotkeys](#hotkeys)
+- [Shortcuts](#shortcuts)
 - [Learn](#Learn)
 - [Python](#python)
 - [Data Science](#data-science)
@@ -24,7 +24,7 @@
 
   
 ___
-## Hotkeys
+## Shortcuts
 
 - Home (key)  - jump to top of page
 - End (key) - jump to bottom
