@@ -3,8 +3,8 @@
 - [Hotkeys](#hotkeys)
 - [Learn](#Learn)
 - [Python](#python)
-- [Data Science](#datascience)
-- [Data Viz](#dataviz)
+- [Data Science](#data-science)
+- [Data Viz](#data-viz)
 - [Pandas](#pandas)
 - [SQL](#sql)
 - [APIs](#apis)
@@ -191,7 +191,7 @@ Fuzz string matching
 			
 
 
-# Data Sci
+# Data Science
 *python for data science*
 
 Nbviewer - https://nbviewer.org
