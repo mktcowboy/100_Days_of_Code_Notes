@@ -1,4 +1,5 @@
 # 100 Days of Code notes
+*note URLs are left vizable for transparency*
 #### CATEGORIES
 - [Shortcuts](#shortcuts)
 - [Learn](#Learn)
@@ -29,8 +30,12 @@ ___
 - Home (key)  - jump to top of page
 - End (key) - jump to bottom
 - Ctrl + L  - lock computer
-- Alt + ←  - web page back
 - Ctrl + x  - cut
+- Ctrl + Y  - redo
+- Ctrl + Z  - undo
+- Alt + ←  - web page back
+- Alt + Tab  - switch b/w open programs
+
 
 ## Learn
 *info below helps when day-to-day projects get slow* 
@@ -61,7 +66,6 @@ ___
     - Postgres
 	    - https://www.crunchydata.com/blog/learn-postgres-at-the-playground
 
-___
 
 # Python 
 *general python notes*
@@ -334,7 +338,7 @@ Call API for each element in a list - https://stackoverflow.com/questions/583236
 Using json_normalize - https://tinyurl.com/4ajufwh9 
 
 other JSON examples - https://medium.com/@arun_prakash/mastering-apis-and-json-with-python-2685dfb0a115
-Requests, JSONs etc.. Basics
+- Requests, JSONs etc.. Basics
 
 JSON editor/viewer - https://jsoneditoronline.org/
 
@@ -359,6 +363,10 @@ Curl - https://curl.se/
 # Scraping
 *scraping / crawling web data* 
 
+Beautiful Soup Docs - https://beautiful-soup-4.readthedocs.io/en/latest/
+
+Scrapy Docs - https://doc.scrapy.org/en/latest/index.html
+
 Requests - https://pypi.org/project/requests-html/
 
 Make scraping easier - https://medium.com/analytics-vidhya/the-modern-way-of-web-scraping-requests-html-2567ba2554f4
@@ -378,15 +386,12 @@ Findall li in ul
 Scraping twitter - https://proxyscrape.com/blog/how-to-scrape-twitter-using-python/
 
 
-Beautiful Soup Docs - https://beautiful-soup-4.readthedocs.io/en/latest/
-Scrapy Docs - https://doc.scrapy.org/en/latest/index.html
+
 
 Articles
-- 24 best free & paid scrapers - https://www.scrapehero.com/top-free-and-paid-web-scraping-tools-and-software/
-
-https://www.scrapehero.com/scrape-alibaba-using-scrapy/
-		○ Scraping tutorial - https://www.geeksforgeeks.org/python-web-scraping-tutorial/
-		○ Scrape hero - https://www.scrapehero.com/how-to-build-and-run-scrapers-on-a-large-scale/
+- https://www.scrapehero.com/scrape-alibaba-using-scrapy/
+- Scraping tutorial - https://www.geeksforgeeks.org/python-web-scraping-tutorial/
+- Scrape hero - https://www.scrapehero.com/how-to-build-and-run-scrapers-on-a-large-scale/
 
 Listly - https://saraametwalli.medium.com/speed-up-your-data-collection-with-listly-f09827a8dddb
 - add-on to web browsers
@@ -534,8 +539,8 @@ Vizy AI camera
 	- https://docs.vizycam.com/doku.php
 
 Motion Scope
-	- https://docs.vizycam.com/doku.php?id=wiki:motionscope_app
-		○ Auto detections motion and speed
+- https://docs.vizycam.com/doku.php?id=wiki:motionscope_app
+- Auto detections motion and speed
 
 
 DALLE-2 vs Midjourney vs StableDiffusion - https://tinyurl.com/3fyfrrj4
@@ -560,9 +565,7 @@ DALLE-2 vs Midjourney vs StableDiffusion - https://tinyurl.com/3fyfrrj4
 50 best linux commands 
 - https://medium.com/beyondx/basic-linux-commands-8b356ddf736b
 	
-https://medium.com/beyondx/
-virtual-machine-tutorial-9043f0fce02b
-	- Virtualbox tutorial
+
 
 # Hacking
 Beginner hacking info 
@@ -617,7 +620,8 @@ https://webflow.com
 Awesome PHP - https://github.com/ziadoz/awesome-php
 - Git with useful PHP libraries
 
-Explaining black box models w/ Shap - https://towardsdatascience.com/how-to-explain-black-box-models-with-shap-the-ultimate-guide-539c152d3275
+Explaining black box models w/ Shap 
+- https://towardsdatascience.com/how-to-explain-black-box-models-with-shap-the-ultimate-guide-539c152d3275
 
 NOAA data - https://www.ncei.noaa.gov
 
@@ -679,7 +683,7 @@ Packages to look into
 - Pypdf2
 - ReportLab
 
-Why we sleep - book notes - 
+Why we sleep - book notes 
 https://www.grahammann.net/book-notes/why-we-sleep-matthew-walker
 
 Text Message Sending Services
@@ -692,8 +696,8 @@ useful PC and Gaming software
 Smart home power monitoring system - https://sense.com/technology
 
 Backend Dev
-	- https://roadmap.sh/backend
-		○ Shows roadmap for becoming backend dev
+- https://roadmap.sh/backend
+	- roadmap for becoming backend dev
 
 Powershell vs CMD - https://www.educba.com/powershell-vs-command-prompt/
 - Most commands executed on cmd can be run on PowerShell
