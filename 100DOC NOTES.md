@@ -1,23 +1,29 @@
 # 100 Days of Code notes
 #### CATEGORIES
 - [Hotkeys](#hotkeys)
-- [Learn](#Learn)
+- [Learn](#learn)
 - [Python](#python)
-- [Data Science](#datascience)
-- [Data Viz](#dataviz)
+- [Data Science](#data-sci)
+	- [Datetime](#datetime)
+- [Data Viz](#data-viz)
+	- [Dashboards](#dashboards)
 - [Pandas](#pandas)
 - [SQL](#sql)
 - [APIs](#apis)
 - [Scraping](#scraping)
-- [Mapping](#mapping)
 - [Markdown](#markdown)
 - [Google](#google)
-- [Virtual Env](#virtual-environments)
+- [Mapping](#mapping)
 - [Image Processing](#image-processing)
 - [OpenCV](#opencv)
+- [Comp Sci](#comp-sci)
+	- [CMD / Powershell](#cmd--powershell)
+	- [Virtual Envs](#virtual-environments)
+	- [Editors](#editors)
+	- [Cache](#cache)
+	- [Git](#git)
 - [Linux](#linux)
 - [Hacking](#hacking)
-- [Git](#git)
 - [Excel](#excel)
 - [Web Dev](#web-dev)
 - [Articles](#articles)
@@ -28,9 +34,15 @@ ___
 
 - Home (key)  - jump to top of page
 - End (key) - jump to bottom
-- Ctrl + L  - lock computer
+- Alt + Tab  - switch b/w open programs
 - Alt + ←  - web page back
-- Ctrl + x  - cut
+- Ctrl + L  - lock computer
+- Ctrl + X  - cut
+- Ctrl + Y  - redo
+- Ctrl + Z  - undo
+
+Articles 
+- https://www.computerhope.com/shortcut.htm
 
 ## Learn
 *info below helps when day-to-day projects get slow* 
@@ -107,9 +119,6 @@ Loops tutorial advanced - https://www.dataquest.io/blog/tutorial-advanced-for-lo
 
 Iterating over lists - https://www.geeksforgeeks.org/iterate-over-a-list-in-python/
 
-Dashboards
-- https://towardsdatascience.com/plotly-dashboards-in-python-28a3bb83702c
-- Plotly Dash gallery - https://dash.gallery/Portal/
 
 Tesseract (character recognition)
 - Git - https://github.com/UB-Mannheim/tesseract
@@ -145,10 +154,11 @@ Instaloader - https://instaloader.github.io
 
 VSCode / python - https://code.visualstudio.com/docs/python/python-tutorial
 
-React for python devs - https://dash.plotly.com/react-for-python-developers
 
-Finding libraries to use with your code - https://python.libhunt.com/
-
+Finding libraries to use with your code 
+- https://python.libhunt.com/
+- https://snyk.io/advisor/python
+	- shows open source examples
 
 Removing parentheses from strings w/ re - https://www.delftstack.com/howto/python/python-remove-parentheses-from-string/
 
@@ -188,11 +198,28 @@ Fuzz string matching
 - Analyzing strings with 2 methods - https://srinivas-kulkarni.medium.com/jaro-winkler-vs-levenshtein-distance-2eab21832fd6
 - String matching - https://typesense.org/learn/fuzzy-string-matching-python/
 
-			
+
+Ultimate python resource hub (git) - https://github.com/ayushi7rawat/Ultimate-Python-Resource-Hub
+- LOTS OF GREAT RESOURCES
+- Look into for practice material
+
+
+Plyer - library for accessing features of your hardware / platforms
+- Docs - https://plyer.readthedocs.io/en/latest/#
+- Articles 
+	- https://www.geeksforgeeks.org/python-desktop-notifier-using-plyer-module/
+		- Desktop notifications
+	- https://medium.com/analytics-vidhya/create-desktop-notifier-using-python-6dab0a1c348c
 
 
 # Data Sci
 *python for data science*
+
+Texthero - https://texthero.org
+- work with text data efficiently
+- Designed to work with pandas
+- https://towardsdatascience.com/texthero-text-preprocessing-representation-and-visualization-for-a-pandas-dataframe-525405af16b6
+- Guide - https://analyticsindiamag.com/texthero-guide-a-python-toolkit-for-text-processing/
 
 Nbviewer - https://nbviewer.org
 - 'simple way to share jupyter notebooks'
@@ -232,16 +259,69 @@ Removing $ sign from data columns
 https://www.kdnuggets.com - Data sci website 
 - Good info, articles, links etc.. 
 
+### Datetime
 
+Dateutil 
+- Timezones 
+	- `from dateutil import tz
+	- from datetime import datetime
+	-  now = datetime.now(tz=tz.tzlocal())
+- Pandas date_range - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.date_range.html
+	- Date_range(start=  , end=  )
 
+Extracting other date info - https://datagy.io/pandas-extract-date-from-datetime/
+General - https://realpython.com/python-datetime/
+- YYYY-MM-DD HH:MM:SS - ISO standard
+
+Dateparser - human readable dates
+- https://dateparser.readthedocs.io/en/latest/
+- Works with relative dates
+- `parse('1 hour ago')`
 
 
 # Data Viz
+
+Seaborn color palettes - https://seaborn.pydata.org/tutorial/color_palettes.html
+- color blind palatte 
+
+Font Awesome - https://fontawesome.com/docs/web/setup/get-started
+- For icons in folium
+
 https://holoviews.org - Plotting w/ python
 - ' open-source Python library designed to make data analysis and visualization seamless and simple'
 - Gallery - https://holoviews.org/gallery/index.html
 
+Figure Factory (Plotly)
+- https://plotly.com/python/figure-factory-table/
+	- Advanced viz for data sci 
+	- Hist > https://plotly.com/python/distplot/
 
+
+### Dashboards
+Dash
+- https://towardsdatascience.com/plotly-dashboards-in-python-28a3bb83702c
+- Plotly Dash gallery https://dash.gallery/Portal/
+- React for python devs - https://dash.plotly.com/react-for-python-developers
+
+
+
+Streamlit 
+- Installing - https://docs.streamlit.io/library/get-started/installation
+- Syntax error hello world - https://stackoverflow.com/questions/72548682/streamlit-run-file-name-py-syntaxerror-invalid-syntax
+	- Need to open through anaconda navigator > new > cmd
+- Getting started = https://docs.streamlit.io/library/get-started
+- Create an app - https://docs.streamlit.io/library/get-started/create-an-app
+- Main concepts - https://docs.streamlit.io/library/get-started/main-concepts
+- API reference docs - https://docs.streamlit.io/library/api-reference
+	- St.write() - https://docs.streamlit.io/library/api-reference/write-magic/st.write
+	- Magic - https://docs.streamlit.io/library/api-reference/write-magic/magic
+- Articles 
+	- Awesome streamlit - https://awesome-streamlit.readthedocs.io/en/latest/_copy_of_project_root/README.html
+	- Peruse for info, help etc..
+	- Getting started w/ stock charts - https://medium.com/geekculture/getting-started-with-streamlit-ed81eafcb298
+		- References yfinance 
+	- Cannot be instantiated - https://github.com/streamlit/streamlit/issues/5140
+	- In depth intro - https://medium.com/towards-data-science/streamlit-101-an-in-depth-introduction-fc8aad9492f2
 
 
 # Pandas
@@ -395,49 +475,6 @@ Listly - https://saraametwalli.medium.com/speed-up-your-data-collection-with-lis
 
 
 
-# Mapping
-
-Manual lat/long generator - https://www.latlong.net
-
-Geocoding
-- Geopy - https://pypi.org/project/geopy/
-    - Usage with Pandas - https://geopy.readthedocs.io/en/latest/#usage-with-pandas
-- Geopandas
-    - `conda install geopandas`
-    - docs - https://geopandas.org/en/stable/getting_started.html
-    - Data Structures - https://geopandas.org/en/stable/docs/user_guide/data_structures.html
-    - install info - https://stackoverflow.com/questions/59284004/fiona-installation-error-on-windows-using-pip
-
-- geoJSON 
-	- for mapping with mapbox - https://github.com/jazzband/geojson 
-	- https://snyk.io/advisor/python/folium/functions/folium.GeoJson
-- Google
-    - https://developers.google.com/maps/documentation/geocoding/
-    - RapidAPI (google) https://rapidapi.com/blog/google-maps-api-react/
-	    - free for the first 500 requests a month
-	
-Mapbox / Plotly
-- https://towardsdatascience.com/meet-plotly-mapbox-best-choice-for-geographic-data-visualization-599b514bcd9a
-- https://www.askpython.com/python/examples/plot-geographical-data-python-plotly
-- https://towardsdatascience.com/how-to-create-interactive-map-plots-with-plotly-7b57e889239a
-- gallery for inspo - https://tinyurl.com/4s7dr8he
-
-
-Folium
-- https://towardsdatascience.com/mapping-messy-addresses-part-2-insights-from-folium-bafd55858faf
-    - Good info, pull code
-
-Mapping Articles 
-- https://rajatamil.medium.com/google-maps-api-geocode-explained-2022-828a059ba6cc
-- https://stackoverflow.com/questions/69854674/python-generate-lat-long-points-from-address
-- http://ocefpaf.github.io/python4oceanographers/
-	- Good articles on mapping / oceanography
-
-Calculating distance between 2 points using Haversine
-- https://towardsdatascience.com/calculating-distance-between-two-geolocations-in-python-26ad3afe287b
-
-
-
 # Markdown
 Guide - https://www.markdownguide.org/
 
@@ -512,10 +549,53 @@ Google alerts
 Adsense best practices - https://www.google.com/adsense/start/resources/best-practices-for-google-adsense/
 
 
-# Virtual Environments
-venv - https://docs.python.org/3/library/venv.html
 
-Virtual box - https://www.virtualbox.org/manual/UserManual.html
+
+# Mapping
+
+Manual lat/long generator - https://www.latlong.net
+
+
+
+Geocoding
+- Geopy - https://pypi.org/project/geopy/
+    - Usage with Pandas - https://geopy.readthedocs.io/en/latest/#usage-with-pandas
+- Geopandas
+    - `conda install geopandas`
+    - docs - https://geopandas.org/en/stable/getting_started.html
+    - Data Structures - https://geopandas.org/en/stable/docs/user_guide/data_structures.html
+    - install info - https://stackoverflow.com/questions/59284004/fiona-installation-error-on-windows-using-pip
+
+- geoJSON 
+	- All zipcodes from all states - geojson files - https://github.com/OpenDataDE/State-zip-code-GeoJSON
+	- for mapping with mapbox - https://github.com/jazzband/geojson 
+	- https://snyk.io/advisor/python/folium/functions/folium.GeoJson
+	- open source code examples https://snyk.io/advisor/python/folium/functions/folium.GeoJson
+- Google
+    - https://developers.google.com/maps/documentation/geocoding/
+    - RapidAPI (google) https://rapidapi.com/blog/google-maps-api-react/
+	    - free for the first 500 requests a month
+	
+Mapbox / Plotly
+- https://towardsdatascience.com/meet-plotly-mapbox-best-choice-for-geographic-data-visualization-599b514bcd9a
+- https://www.askpython.com/python/examples/plot-geographical-data-python-plotly
+- https://towardsdatascience.com/how-to-create-interactive-map-plots-with-plotly-7b57e889239a
+- gallery for inspo - https://tinyurl.com/4s7dr8he
+
+
+Folium
+- https://towardsdatascience.com/mapping-messy-addresses-part-2-insights-from-folium-bafd55858faf
+    - Good info, pull code
+
+Mapping Articles 
+- https://rajatamil.medium.com/google-maps-api-geocode-explained-2022-828a059ba6cc
+- https://stackoverflow.com/questions/69854674/python-generate-lat-long-points-from-address
+- http://ocefpaf.github.io/python4oceanographers/
+	- Good articles on mapping / oceanography
+- Mapping zipcodes w/ folium - https://towardsdatascience.com/visualizing-data-at-the-zip-code-level-with-folium-d07ac983db20
+
+Calculating distance between 2 points using Haversine
+- https://towardsdatascience.com/calculating-distance-between-two-geolocations-in-python-26ad3afe287b
 
 
 
@@ -540,6 +620,9 @@ Motion Scope
 
 DALLE-2 vs Midjourney vs StableDiffusion - https://tinyurl.com/3fyfrrj4
 
+Deepfake AI video - https://twitter.com/TedsLittleDream/status/1562836627885416449?s=20&t=xo_Zi6PrLsbp5O73YjKmDg
+- Check out how she made this, apps etc
+
 
 ## OpenCV
 - https://www.askpython.com/python/examples/count-objects-in-an-image
@@ -553,6 +636,62 @@ DALLE-2 vs Midjourney vs StableDiffusion - https://tinyurl.com/3fyfrrj4
 - https://www.geeksforgeeks.org/python-using-pil-imagegrab-and-pytesseract/
     - Does a good job of processing image to get into 'readable' format
     - Using imagegrab and pytesseract
+
+# Comp Sci
+
+## CMD / Powershell
+
+CMD 
+- `Where.exe python` - Shows path to python installs
+- Dir 
+	- list files based on other criteria 
+	- To reverse sorting orders add - in call prefix ex: `dir /o-n`
+	- https://codesteps.com/2011/04/27/windows-dir-command-how-to-list-the-files-by-sort-order/
+		-  `dir /os` or `dir /o-s ` >> files based on size
+		-  `dir /od` or `dir/o-d` >> based on date/time
+		- LS is linux equivalent - https://phoenixnap.com/kb/linux-ls-commands
+- Mkdir - make directory
+	- https://www.tutorialspoint.com/unix_commands/mkdir.htm
+- Pushd & popd 
+	- Pushd is similar to cd 
+https://www.howtogeek.com/659146/how-to-use-pushd-and-popd-on-linux/
+
+## Virtual Environments
+venv - https://docs.python.org/3/library/venv.html
+
+Primer / basics - https://realpython.com/python-virtual-environments-a-primer/
+- Activating - `venv\Scripts\activate`
+- Deactivate - `deactivate`
+- Installing packages to venv - `python -m pip install ___`
+	- Because you first created and activated the virtual env, pip installs the packages in an isolated location
+
+Pip env
+-  automatically creates and manages a virtualenv for your projects
+- Install - https://pypi.org/project/pipenv/
+- Docs / home - https://pipenv.pypa.io/en/latest/#install-pipenv-today
+	- See for more info
+- Not recognized - https://stackoverflow.com/questions/69795302/pipenv-is-not-recognized-as-an-internal-or-external-command-operable-program
+- Installing packages with pipenv - slow - https://github.com/pypa/pipenv/issues/2873
+
+
+Virtual box - https://www.virtualbox.org/manual/UserManual.html
+
+## Editors 
+
+Visual Studio
+
+- How to change the interpreter - https://stackoverflow.com/questions/47602151/how-to-change-interpreter-in-visual-studio-code
+- `ctrl + shit + p`
+
+### Anaconda
+
+Anaconda Navigator - https://anaconda.org/anaconda/anaconda-navigator
+
+Jupyter checkpoint files - https://stackoverflow.com/questions/46421663/what-are-jupyter-notebook-checkpoint-files-for
+
+## Cache
+
+How to - https://medium.com/fintechexplained/advanced-python-how-to-implement-caching-in-python-application-9d0a4136b845
 
 
 # Linux 
@@ -609,10 +748,28 @@ https://webflow.com
 
 [Wix](Wix.com) - website builder
 
+HTML - https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
 
+Jekyll - https://jekyllrb.com
+- https://github.com/topics/jekyll-theme
+	- blog-aware, site generator written in Ruby. It takes raw text files, runs it through a renderer and produces a publishable static website
+	- Beautiful jekyll - https://github.com/daattali/beautiful-jekyll
+		- ready-to-use templates, nice websites quickly
+
+
+Domains 
+- How to register - https://websitesetup.org/how-to-register-domain-name/
+- How to get free domains - https://sitechecker.pro/how-to-get-free-domain-name/
+- ICANN - https://www.icann.org
+- Costs related to domains - https://websitesetup.org/how-much-costs-domain-name/
 
 
 # Articles
+
+Faceswap - https://forum.faceswap.dev/viewtopic.php?f=4&t=20
+- leading free and Open Source multi-platform Deepfakes software
+- Forum - https://forum.faceswap.dev
+- Guides - https://forum.faceswap.dev/app.php/tag/Guide
 
 Awesome PHP - https://github.com/ziadoz/awesome-php
 - Git with useful PHP libraries
@@ -711,3 +868,9 @@ PJ trackers
 - Git - https://github.com/ihacker42/plane-notify
 - ADSB exchange API - https://www.adsbexchange.com/data/rest-api-samples/
     - Cost $10/mo for API
+
+Inside AirBNB data - http://insideairbnb.com/explore
+
+Klimat app - https://klimat.app
+- For Strava
+- How-to > https://everydaymtb.com/klimat-app-add-weather-data-to-strava-rides/
