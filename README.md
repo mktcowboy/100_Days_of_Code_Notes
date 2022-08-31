@@ -1,5 +1,5 @@
 # 100 Days of Code notes
-* URLs are left in long form for click-through transparency!*
+*URLs are left in long form for click-through transparency!*
 
 #### CATEGORIES
 - [Hotkeys](#hotkeys)
