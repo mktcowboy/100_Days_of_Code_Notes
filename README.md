@@ -28,4 +28,11 @@
 - [Hacking](#hacking)
 - [Excel](#excel)
 - [Web Dev](#web-dev)
-- [Articles](#articles)
+- [Articles](100DOC_Notes.md#articles)
+
+
+below is practice for linking to sections in other markdown files 
+- using blueprint from this article - https://www.codegrepper.com/code-examples/whatever/Linking+to+a+section+in+another+markdown+file
+
+
+## [Articles](100DOC_Notes.md#articles)
