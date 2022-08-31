@@ -330,11 +330,21 @@ Streamlit
 .astype()
 	- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.astype.html
 
-Pivot Tables
-- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.pivot_table.html
-
 Df.rename
 	- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html
+
+Replace - https://www.geeksforgeeks.org/python-pandas-dataframe-replace/
+
+Clip - https://tinyurl.com/2p8c8zvh
+- Replace < 0 with 0 - https://tinyurl.com/3b32stjj
+	- `.clip(lower=0)`
+	- `df['IBR'] = df['IBR'].clip(lower=0)`
+
+Where - replace values where the condition is False
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.where.html
+
+Mask - replace value where condition is true
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mask.html
 		
 Df.to_csv
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html
@@ -381,7 +391,10 @@ Nan Values
 - Checking NaN values
 	- https://stackoverflow.com/questions/43424199/display-rows-with-one-or-more-nan-values-in-pandas-dataframe
 
+Pivot Tables
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.pivot_table.html
 
+If statements  - https://datatofish.com/if-condition-in-pandas-dataframe/
 
 
 # SQL
