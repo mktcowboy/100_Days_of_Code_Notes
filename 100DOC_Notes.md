@@ -333,7 +333,20 @@ Streamlit
 Df.rename
 	- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html
 
+Df.at - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.at.html
+- Accessing / replacing single values
+
 Replace - https://www.geeksforgeeks.org/python-pandas-dataframe-replace/
+
+Concat 
+- https://www.geeksforgeeks.org/how-to-concatenate-two-or-more-pandas-dataframes/
+	- Vertical - axis=0
+	- Horizontal - axis=1
+- https://towardsdatascience.com/pandas-concat-tricks-you-should-know-to-speed-up-your-data-analysis-cd3d4fdfe6dd
+- Drop duplicates - https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html
+- Join vs merge vs concat 
+	- https://stackoverflow.com/questions/38256104/differences-between-merge-and-concat-in-pandas
+    - Merge with on='column' 
 
 Clip - https://tinyurl.com/2p8c8zvh
 - Replace < 0 with 0 - https://tinyurl.com/3b32stjj
@@ -377,6 +390,10 @@ Effective pandas (book/git) - https://github.com/mattharrison/effective_pandas_b
 
 Groupby - https://www.datasciencemadesimple.com/group-by-sum-in-pandas-dataframe-python-2/
 
+Contains 
+- https://www.statology.org/pandas-drop-rows-that-contain-string/
+- Dropping samples that contain - examples
+
 Working with strings 
 - Removing characters from strings - https://datagy.io/python-remove-character-from-string/
 - find similar strings https://pythoninoffice.com/how-to-find-similar-strings-using-python/
@@ -390,6 +407,7 @@ Nan Values
 	- sets new df to NaN values
 - Checking NaN values
 	- https://stackoverflow.com/questions/43424199/display-rows-with-one-or-more-nan-values-in-pandas-dataframe
+- Replacing NaN values https://moonbooks.org/Articles/How-to-replace-NaN-values-in-a-pandas-dataframe-/
 
 Pivot Tables
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.pivot_table.html
