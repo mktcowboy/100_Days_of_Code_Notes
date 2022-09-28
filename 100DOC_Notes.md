@@ -5,11 +5,12 @@
 - [Hotkeys](#hotkeys)
 - [Learn](#learn)
 - [Python](#python)
+- [Pandas](#pandas)
 - [Data Science](#data-sci)
+	- [Jupyter](#jupyter)
 	- [Datetime](#datetime)
 - [Data Viz](#data-viz)
 	- [Dashboards](#dashboards)
-- [Pandas](#pandas)
 - [SQL](#sql)
 - [APIs](#apis)
 - [Scraping](#scraping)
@@ -28,7 +29,7 @@
 - [Hacking](#hacking)
 - [Excel](#excel)
 - [Web Dev](#web-dev)
-- [Articles](#articles)
+- [Other Articles](#other-articles)
 
   
 ___
@@ -43,11 +44,10 @@ ___
 - Ctrl + Y  - redo
 - Ctrl + Z  - undo
 
-Articles 
+Articles on shortcuts & hotkeys
 - https://www.computerhope.com/shortcut.htm
 
 ## Learn
-*info below helps when day-to-day projects get slow* 
 - CodeAcademy
 	-   Linear regression - https://tinyurl.com/mrx746ew
 - HackerRank - https://www.hackerrank.com/dashboard
@@ -108,6 +108,12 @@ f-strings
 
 r-strings ending with a backslash - https://docs.python.org/3/faq/design.html#why-can-t-raw-strings-r-strings-end-with-a-backslash
 
+Zip (python operator)
+- https://www.geeksforgeeks.org/zip-in-python/
+- https://www.freecodecamp.org/news/the-zip-function-in-python-explained-with-examples/
+- `df['sig2'] = [1 if c < sma else 0 for c, sma in zip(df['Close'],df['sma'])]`
+
+
 Kite Blog (python) - https://www.kite.com/blog/category/python/
 
 Slack Python groups
@@ -128,6 +134,7 @@ Tesseract (character recognition)
 	- screenshot to text output 
 - Articles 
     - https://towardsdatascience.com/extract-text-from-image-using-python-8e8cfbbce743
+	- https://medium.com/pythoneers/text-detection-and-extraction-from-image-with-python-5c0c75a8ff14
 
 URL shortener in python
 	- https://www.thepythoncode.com/article/make-url-shortener-in-python
@@ -213,125 +220,13 @@ Plyer - library for accessing features of your hardware / platforms
 		- Desktop notifications
 	- https://medium.com/analytics-vidhya/create-desktop-notifier-using-python-6dab0a1c348c
 
-
-# Data Sci
-*python for data science*
-
-Texthero - https://texthero.org
-- work with text data efficiently
-- Designed to work with pandas
-- https://towardsdatascience.com/texthero-text-preprocessing-representation-and-visualization-for-a-pandas-dataframe-525405af16b6
-- Guide - https://analyticsindiamag.com/texthero-guide-a-python-toolkit-for-text-processing/
-
-Nbviewer - https://nbviewer.org
-- 'simple way to share jupyter notebooks'
-- good examples w/ code on their homepage
-
-
-Python for data sci (blog)
-- https://www.tomasbeuzen.com/python-programming-for-data-science/README.html
-    - Stopped here - https://www.tomasbeuzen.com/python-programming-for-data-science/chapters/chapter2-loops-functions.html
-
-Stats - https://www.analyticsvidhya.com/blog/
-
-Hypothesis testing - https://towardsdatascience.com/significance-or-hypothesis-tests-with-python-7ed35e9ac9b6
-
-Dataquest - https://community.dataquest.io
-- Look into getting in the slack channel
-
-Numpy data types - https://numpy.org/doc/stable/reference/arrays.dtypes.html
-
-Ints vs floats - https://www.delftstack.com/howto/python/float-vs-int-in-python/
-
-Removing $ sign from data columns 
-- https://towardsdatascience.com/5-methods-to-remove-the-from-your-data-in-python-and-the-fastest-one-281489382455
-    - "My personal choice would be to use the fourth method, the list comprehension with the .strip method"
-    - `.replace( '[\$,)]','', regex=True)`
-        - works best
-        - `df['Sales'] = df['Sales'].replace( '[\$,)]','', regex=True)`
-    - `[x.strip('$') for x in df]`
-    - `str.replace('$','')`
-- Strip method .strip()
-    - https://www.tutorialsteacher.com/python/string-strip
-	- https://www.w3schools.com/python/ref_string_strip.asp
-	- https://www.programiz.com/python-programming/methods/string/strip
-	- https://www.geeksforgeeks.org/python-string-strip/
-
-
-https://www.kdnuggets.com - Data sci website 
-- Good info, articles, links etc.. 
-
-### Datetime
-
-Dateutil 
-- Timezones 
-	- `from dateutil import tz
-	- from datetime import datetime
-	-  now = datetime.now(tz=tz.tzlocal())
-- Pandas date_range - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.date_range.html
-	- Date_range(start=  , end=  )
-
-Extracting other date info - https://datagy.io/pandas-extract-date-from-datetime/
-General - https://realpython.com/python-datetime/
-- YYYY-MM-DD HH:MM:SS - ISO standard
-
-Dateparser - human readable dates
-- https://dateparser.readthedocs.io/en/latest/
-- Works with relative dates
-- `parse('1 hour ago')`
-
-
-# Data Viz
-
-Seaborn color palettes - https://seaborn.pydata.org/tutorial/color_palettes.html
-- color blind palatte 
-
-Font Awesome - https://fontawesome.com/docs/web/setup/get-started
-- For icons in folium
-
-https://holoviews.org - Plotting w/ python
-- ' open-source Python library designed to make data analysis and visualization seamless and simple'
-- Gallery - https://holoviews.org/gallery/index.html
-
-Figure Factory (Plotly)
-- https://plotly.com/python/figure-factory-table/
-	- Advanced viz for data sci 
-	- Hist > https://plotly.com/python/distplot/
-
-
-### Dashboards
-Dash
-- https://towardsdatascience.com/plotly-dashboards-in-python-28a3bb83702c
-- Plotly Dash gallery https://dash.gallery/Portal/
-- React for python devs - https://dash.plotly.com/react-for-python-developers
-
-
-
-Streamlit 
-- Installing - https://docs.streamlit.io/library/get-started/installation
-- Syntax error hello world - https://stackoverflow.com/questions/72548682/streamlit-run-file-name-py-syntaxerror-invalid-syntax
-	- Need to open through anaconda navigator > new > cmd
-- Getting started = https://docs.streamlit.io/library/get-started
-- Create an app - https://docs.streamlit.io/library/get-started/create-an-app
-- Main concepts - https://docs.streamlit.io/library/get-started/main-concepts
-- API reference docs - https://docs.streamlit.io/library/api-reference
-	- St.write() - https://docs.streamlit.io/library/api-reference/write-magic/st.write
-	- Magic - https://docs.streamlit.io/library/api-reference/write-magic/magic
-- Articles 
-	- Awesome streamlit - https://awesome-streamlit.readthedocs.io/en/latest/_copy_of_project_root/README.html
-	- Peruse for info, help etc..
-	- Getting started w/ stock charts - https://medium.com/geekculture/getting-started-with-streamlit-ed81eafcb298
-		- References yfinance 
-	- Cannot be instantiated - https://github.com/streamlit/streamlit/issues/5140
-	- In depth intro - https://medium.com/towards-data-science/streamlit-101-an-in-depth-introduction-fc8aad9492f2
-
-
 # Pandas
 .astype()
 	- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.astype.html
 
 Df.rename
-	- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html
+- `Df.rename(columns = {'old':'new'}, inplace=True)`
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html
 
 Df.at - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.at.html
 - Accessing / replacing single values
@@ -355,6 +250,10 @@ Clip - https://tinyurl.com/2p8c8zvh
 
 Where - replace values where the condition is False
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.where.html
+
+Merge 
+-  joins dfs
+- https://www.shanelynn.ie/merge-join-dataframes-python-pandas-index-1/
 
 Mask - replace value where condition is true
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mask.html
@@ -413,6 +312,150 @@ Pivot Tables
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.pivot_table.html
 
 If statements  - https://datatofish.com/if-condition-in-pandas-dataframe/
+
+# Data Sci
+*python for data science*
+
+Texthero - https://texthero.org
+- work with text data efficiently
+- Designed to work with pandas
+- https://towardsdatascience.com/texthero-text-preprocessing-representation-and-visualization-for-a-pandas-dataframe-525405af16b6
+- Guide - https://analyticsindiamag.com/texthero-guide-a-python-toolkit-for-text-processing/
+
+Dataquest - https://community.dataquest.io
+- Look into getting in the slack channel
+
+### *Jupyter*
+Nbviewer - https://nbviewer.org
+- 'simple way to share jupyter notebooks'
+- good examples w/ code on their homepage
+
+Dockerizing jupyter projects - https://towardsdatascience.com/dockerizing-jupyter-projects-39aad547484a
+
+
+*Blogs*
+- https://www.sarem-seitz.com/
+	- Forecasting with Decision Trees and Random Forests https://www.sarem-seitz.com/forecasting-with-decision-trees-and-random-forests/
+- https://cmdlinetips.com
+	- advanced topics like stats for ML
+- https://www.tomasbeuzen.com/python-programming-for-data-science/README.html
+    - Stopped here - https://www.tomasbeuzen.com/python-programming-for-data-science/chapters/chapter2-loops-functions.html
+- https://www.analyticsvidhya.com/blog/
+	- Stats 
+- https://www.kdnuggets.com
+
+### *Datetime*
+
+Dateutil 
+- Timezones 
+	- `from dateutil import tz
+	- from datetime import datetime
+	-  now = datetime.now(tz=tz.tzlocal())
+- Pandas date_range - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.date_range.html
+	- Date_range(start=  , end=  )
+
+Extracting other date info - https://datagy.io/pandas-extract-date-from-datetime/
+General - https://realpython.com/python-datetime/
+- YYYY-MM-DD HH:MM:SS - ISO standard
+
+Dateparser - human readable dates
+- https://dateparser.readthedocs.io/en/latest/
+- Works with relative dates
+- `parse('1 hour ago')`
+
+
+### *Articles*
+
+Common excel formulas in python
+- https://medium.com/analytics-vidhya/common-excel-formulas-in-python-c5a7ce0ae07a
+	- Df.merge
+	- Np.where > If functions
+		- https://www.educba.com/numpy-where/
+
+17 stats tests - https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/
+
+Hypothesis testing - https://towardsdatascience.com/significance-or-hypothesis-tests-with-python-7ed35e9ac9b6
+
+Numpy data types - https://numpy.org/doc/stable/reference/arrays.dtypes.html
+
+Ints vs floats - https://www.delftstack.com/howto/python/float-vs-int-in-python/
+
+Removing $ sign from data columns 
+- https://towardsdatascience.com/5-methods-to-remove-the-from-your-data-in-python-and-the-fastest-one-281489382455
+    - "My personal choice would be to use the fourth method, the list comprehension with the .strip method"
+    - `.replace( '[\$,)]','', regex=True)`
+        - works best
+        - `df['Sales'] = df['Sales'].replace( '[\$,)]','', regex=True)`
+    - `[x.strip('$') for x in df]`
+    - `str.replace('$','')`
+- Strip method .strip()
+    - https://www.tutorialsteacher.com/python/string-strip
+	- https://www.w3schools.com/python/ref_string_strip.asp
+	- https://www.programiz.com/python-programming/methods/string/strip
+	- https://www.geeksforgeeks.org/python-string-strip/
+
+
+
+# Data Viz
+
+Seaborn color palettes - https://seaborn.pydata.org/tutorial/color_palettes.html
+- color blind palatte 
+
+Font Awesome - https://fontawesome.com/docs/web/setup/get-started
+- For icons in folium
+
+https://holoviews.org - Plotting w/ python
+- ' open-source Python library designed to make data analysis and visualization seamless and simple'
+- Gallery - https://holoviews.org/gallery/index.html
+
+Figure Factory (Plotly)
+- https://plotly.com/python/figure-factory-table/
+	- Advanced viz for data sci 
+	- Hist > https://plotly.com/python/distplot/
+
+Plotly candlestick charting - https://plotly.com/python/candlestick-charts/
+
+### *Articles*
+
+scatter plots - https://pythongeeks.org/python-scatter-plot/
+
+Highlighting datapoints in scatterplots
+- https://cmdlinetips.com/2019/11/how-to-highlight-data-points-with-colors-and-text-in-python/
+	- Filter for 'outlier' values then plot with other values in dif color
+
+How to create two y-axis matplotlib
+- https://www.statology.org/matplotlib-two-y-axes/
+	- questionable if you should even make these 
+
+
+### *Dashboards*
+Dash
+- https://towardsdatascience.com/plotly-dashboards-in-python-28a3bb83702c
+- Plotly Dash gallery https://dash.gallery/Portal/
+- React for python devs - https://dash.plotly.com/react-for-python-developers
+
+
+
+Streamlit 
+- Installing - https://docs.streamlit.io/library/get-started/installation
+- Syntax error hello world - https://stackoverflow.com/questions/72548682/streamlit-run-file-name-py-syntaxerror-invalid-syntax
+	- Need to open through anaconda navigator > new > cmd
+- Getting started = https://docs.streamlit.io/library/get-started
+- Create an app - https://docs.streamlit.io/library/get-started/create-an-app
+- Main concepts - https://docs.streamlit.io/library/get-started/main-concepts
+- API reference docs - https://docs.streamlit.io/library/api-reference
+	- St.write() - https://docs.streamlit.io/library/api-reference/write-magic/st.write
+	- Magic - https://docs.streamlit.io/library/api-reference/write-magic/magic
+- Articles 
+	- Awesome streamlit - https://awesome-streamlit.readthedocs.io/en/latest/_copy_of_project_root/README.html
+	- Peruse for info, help etc..
+	- Getting started w/ stock charts - https://medium.com/geekculture/getting-started-with-streamlit-ed81eafcb298
+		- References yfinance 
+	- Cannot be instantiated - https://github.com/streamlit/streamlit/issues/5140
+	- In depth intro - https://medium.com/towards-data-science/streamlit-101-an-in-depth-introduction-fc8aad9492f2
+
+
+
 
 
 # SQL
@@ -741,6 +784,10 @@ Beginner hacking info
 - https://medium.com/@toxglot/3-things-to-do-if-you-want-to-be-a-penetration-tester-168e6d52be31
 	- HackTheBox
 
+Metasploitable 
+- https://docs.rapid7.com/metasploit/quick-start-guide
+
+
 
 # Git
 
@@ -797,7 +844,16 @@ Domains
 - Costs related to domains - https://websitesetup.org/how-much-costs-domain-name/
 
 
-# Articles
+# Other Articles
+
+https://github.com/jivoi/awesome-osint
+- open source intelligence tools and resources
+
+Sorting algos  - https://www.toptal.com/developers/sorting-algorithms
+
+Tracking cars using license plates - https://twitter.com/intidc/status/1574263808607997953
+
+https://fly.io/blog/
 
 Faceswap - https://forum.faceswap.dev/viewtopic.php?f=4&t=20
 - leading free and Open Source multi-platform Deepfakes software
