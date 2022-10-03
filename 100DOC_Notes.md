@@ -29,6 +29,7 @@
 - [Hacking](#hacking)
 - [Excel](#excel)
 - [Web Dev](#web-dev)
+- [News](#news)
 - [Other Articles](#other-articles)
 
   
@@ -113,6 +114,12 @@ Zip (python operator)
 - https://www.freecodecamp.org/news/the-zip-function-in-python-explained-with-examples/
 - `df['sig2'] = [1 if c < sma else 0 for c, sma in zip(df['Close'],df['sma'])]`
 
+Return statements
+- https://realpython.com/python-return-statement/
+
+pyEnchant - http://pyenchant.github.io/pyenchant/
+- spellchecking library for Python, based on the excellent Enchant library
+- tutorial - http://pyenchant.github.io/pyenchant/tutorial.html
 
 Kite Blog (python) - https://www.kite.com/blog/category/python/
 
@@ -221,100 +228,248 @@ Plyer - library for accessing features of your hardware / platforms
 	- https://medium.com/analytics-vidhya/create-desktop-notifier-using-python-6dab0a1c348c
 
 # Pandas
-.astype()
-	- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.astype.html
 
-Df.rename
-- `Df.rename(columns = {'old':'new'}, inplace=True)`
-- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html
+.append 
+- Examples of using this method https://datascienceparichay.com/article/append-rows-to-a-pandas-dataframe/
 
-Df.at - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.at.html
-- Accessing / replacing single values
+.astype*
+- Cast a pandas object to a specified dtype
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.astype.html
 
-Replace - https://www.geeksforgeeks.org/python-pandas-dataframe-replace/
+.at 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.at.html
+	- Access a single value for a row/column label pair
+	- `df.at[4, 'B']`
+	- `df.loc[5].at['B']`
 
-Concat 
-- https://www.geeksforgeeks.org/how-to-concatenate-two-or-more-pandas-dataframes/
-	- Vertical - axis=0
-	- Horizontal - axis=1
-- https://towardsdatascience.com/pandas-concat-tricks-you-should-know-to-speed-up-your-data-analysis-cd3d4fdfe6dd
-- Drop duplicates - https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html
-- Join vs merge vs concat 
-	- https://stackoverflow.com/questions/38256104/differences-between-merge-and-concat-in-pandas
-    - Merge with on='column' 
-
-Clip - https://tinyurl.com/2p8c8zvh
+.clip 
+- https://tinyurl.com/2p8c8zvh
 - Replace < 0 with 0 - https://tinyurl.com/3b32stjj
 	- `.clip(lower=0)`
 	- `df['IBR'] = df['IBR'].clip(lower=0)`
 
-Where - replace values where the condition is False
+.columns 
+- prints column names 
+
+.concat 
+- https://www.geeksforgeeks.org/how-to-concatenate-two-or-more-pandas-dataframes/
+	- Vertical - axis=0
+	- Horizontal - axis=1
+- https://towardsdatascience.com/pandas-concat-tricks-you-should-know-to-speed-up-your-data-analysis-cd3d4fdfe6dd
+- Join vs merge vs concat 
+	- https://stackoverflow.com/questions/38256104/differences-between-merge-and-concat-in-pandas
+	- Merge with on='column' 
+
+.contains
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.contains.html
+- Drop rows that contain string - https://www.statology.org/pandas-drop-rows-that-contain-string/
+
+.convert
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.convert_dtypes.html
+
+.date_range 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.date_range.html
+- `date_range(start=  , end=  )`
+
+.diff 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.diff.html
+	- Difference with previous row
+
+.drop 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html
+
+.drop_duplicates 
+- https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html
+
+.duplicated()
+- https://www.geeksforgeeks.org/python-pandas-dataframe-duplicated/
+
+.from_dicts(dicts)
+- Construct DataFrame from dict of array-like or dicts
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.from_dict.html
+- https://tinyurl.com/bdz9893a
+
+.groupby
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html
+- Groupby sum - https://www.datasciencemadesimple.com/group-by-sum-in-pandas-dataframe-python-2/
+
+.iat 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iat.html
+- Access a single value for a row/column pair by integer position.
+- Similar to iloc
+
+
+.idxmin - returns min 
+.idxmax - returns max
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmax.html
+
+.insert
+- `.insert(loc=1, column='City', value=city)`
+- docs - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.insert.html
+
+.isna 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.isna.html
+- https://datatofish.com/rows-with-nan-pandas-dataframe/
+- `df[df['column name'].isna()]`
+
+.json.normalize
+- Used on API calls
+	- Makes output moar pretty
+
+.loc 
+- `Df.loc['row name'] = df.sum()`
+	- Add a new row that is the sum of the columns
+- If statements with .loc - https://datatofish.com/if-condition-in-pandas-dataframe/
+- `df.loc[df['column name'] condition, 'new column name'] = 'value if condition is met'`
+
+.mask 
+- replace value where condition is true
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mask.html
+
+.merge
+- Joins dfs
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.merge.html
+- https://www.shanelynn.ie/merge-join-dataframes-python-pandas-index-1/
+- Merge multiple dfs
+	- `final_df = reduce(lambda  left,right: pd.merge(left,right,on=['column_name'],
+		                    how='outer'), dfs)`
+
+.pivot_table 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.pivot_table.html
+
+
+.query 
+- https://thecleverprogrammer.com/2021/12/28/query-data-using-python/
+- Essentially a filter
+
+
+.read 
+- `.read_csv` - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
+- `.read_excel` - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html
+	
+.rename
+- `Df.rename(columns = {'old':'new'}, inplace=True)`
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html
+- https://www.geeksforgeeks.org/python-pandas-dataframe-rename/
+
+.replace 
+- Replace values given in to_replace with value
+	- `.replace(to_replace=None, value= )`
+- https://www.geeksforgeeks.org/python-pandas-dataframe-replace/
+- https://datagy.io/pandas-replace-values/
+	- Multiple values
+- Single values in df 
+	- https://stackoverflow.com/questions/50938519/trying-to-change-a-single-value-in-pandas-dataframe
+
+.reset_index
+- Docs - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.reset_index.html
+- https://www.geeksforgeeks.org/reset-index-in-pandas-dataframe/
+
+
+.sort_values
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_values.html
+
+str.contains 
+- Docs - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.contains.html
+- https://www.statology.org/pandas-drop-rows-that-contain-string/
+	- Dropping samples that contain - examples
+
+.str.extract
+- Extract capture groups in the regex pat as columns in a DataFrame
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.extract.html
+
+
+.str.split
+- https://www.geeksforgeeks.org/python-pandas-split-strings-into-two-list-columns-using-str-split/
+-  https://stackoverflow.com/questions/38231591/split-explode-a-column-of-dictionaries-into-separate-columns-with-pandas
+- https://datascienceparichay.com/article/split-pandas-column-of-lists-into-multiple-columns/
+	- see for code snippets
+
+
+.str.strip 
+- Remove leading and trailing characters
+- Docs - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.strip.html
+
+.to_csv
+-  https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html
+- https://datagy.io/pandas-dataframe-to-csv/ 
+	- More details on parameters
+
+
+.to_numeric 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_numeric.html
+	- Converts to numeric type
+
+.where 
+- replace values where the condition is False
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.where.html
 
-Merge 
--  joins dfs
-- https://www.shanelynn.ie/merge-join-dataframes-python-pandas-index-1/
 
-Mask - replace value where condition is true
-- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mask.html
-		
-Df.to_csv
-- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html
-- https://datagy.io/pandas-dataframe-to-csv/
-    - More details on parameters
+
+*Other Info*
+
+Effective pandas (book/git) - https://github.com/mattharrison/effective_pandas_book
+
+Working with index
+	- Set and reset 
+	- https://datagy.io/pandas-drop-index-column/
 
 Appending new rows to DFs
  - `Df.loc['row name'] = df.sum()`
     - add new row that is the sum of the columns
 - https://datascienceparichay.com/article/append-rows-to-a-pandas-dataframe/
 
-
-Index reset - https://datagy.io/pandas-drop-index-column/
-
 loc / iloc
 - filtering https://www.shanelynn.ie/pandas-iloc-loc-select-rows-and-columns-dataframe/
     - iloc uses position
 	- loc uses labels
-
-Split
-- https://stackoverflow.com/questions/38231591/split-explode-a-column-of-dictionaries-into-separate-columns-with-pandas
-- https://datascienceparichay.com/article/split-pandas-column-of-lists-into-multiple-columns/
-    - see for code snippets
-
-Changing datatypes
-- Pd.dataframe.convert - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.convert_dtypes.html
-- Pd.to_numeric - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_numeric.html#pandas.to_numeric
-
-Effective pandas (book/git) - https://github.com/mattharrison/effective_pandas_book
-
-Groupby - https://www.datasciencemadesimple.com/group-by-sum-in-pandas-dataframe-python-2/
-
-Contains 
-- https://www.statology.org/pandas-drop-rows-that-contain-string/
-- Dropping samples that contain - examples
 
 Working with strings 
 - Removing characters from strings - https://datagy.io/python-remove-character-from-string/
 - find similar strings https://pythoninoffice.com/how-to-find-similar-strings-using-python/
 - Adding string columns - https://towardsdatascience.com/combine-two-string-columns-pandas-fde0287485d9
 
-Nan Values
-- .isna - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.isna.html
-	- https://datatofish.com/rows-with-nan-pandas-dataframe/
-- `df[df['column name'].isna()]`
-- `df1 = df[df.isna().any(axis=1)]`
-	- sets new df to NaN values
-- Checking NaN values
-	- https://stackoverflow.com/questions/43424199/display-rows-with-one-or-more-nan-values-in-pandas-dataframe
-- Replacing NaN values https://moonbooks.org/Articles/How-to-replace-NaN-values-in-a-pandas-dataframe-/
+Changing datatypes 
+- .convert - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.convert_dtypes.html
+- .to_numeric 
+	- Multiple options - https://www.datasciencemadesimple.com/convert-character-to-numeric-pandas-python-string-to-integer-2/
+- .astype*
+	- Cast a pandas object to a specified dtype
+	-  https://devenum.com/pandas-convert-multiple-columns-to-float/
+	-  https://www.askpython.com/python/built-in-methods/python-astype
 
-Pivot Tables
-- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.pivot_table.html
+NaN values
+- Replacing NaN values
+	- https://moonbooks.org/Articles/How-to-replace-NaN-values-in-a-pandas-dataframe-/
+- Display rows with NaN values - https://stackoverflow.com/questions/43424199/display-rows-with-one-or-more-nan-values-in-pandas-dataframe
+	- `df[df['column name'].isna()]`
+	- `df1 = df[df.isna().any(axis=1)]`
+		- sets new df to NaN values
 
-If statements  - https://datatofish.com/if-condition-in-pandas-dataframe/
+If statements 
+	- https://datatofish.com/if-condition-in-pandas-dataframe/
+
+
+Separating columns by characters
+	- https://stackoverflow.com/questions/67223873/separate-column-data-based-on-comma-characters-using-pandas-regex
+
+Reordering columns
+- https://datagy.io/reorder-pandas-columns/
+- `.insert(loc=1, column='City', value=city)`
+
+
+		
+
+
+
+
 
 # Data Sci
 *python for data science*
+
+QQ Plots (quantile-quantile)
+- Understanding them - https://data.library.virginia.edu/understanding-q-q-plots/
+	- graphical tool to help us assess if a set of data plausibly came from some theoretical distribution such as a Normal or exponential
 
 Texthero - https://texthero.org
 - work with text data efficiently
@@ -334,6 +489,7 @@ Dockerizing jupyter projects - https://towardsdatascience.com/dockerizing-jupyte
 
 
 *Blogs*
+- https://datascienceparichay.com
 - https://www.sarem-seitz.com/
 	- Forecasting with Decision Trees and Random Forests https://www.sarem-seitz.com/forecasting-with-decision-trees-and-random-forests/
 - https://cmdlinetips.com
@@ -345,6 +501,9 @@ Dockerizing jupyter projects - https://towardsdatascience.com/dockerizing-jupyte
 - https://www.kdnuggets.com
 
 ### *Datetime*
+
+selecting a date range
+- `df2 = df.loc['2022-1-1' : '2022-7-4']`
 
 Dateutil 
 - Timezones 
@@ -398,26 +557,41 @@ Removing $ sign from data columns
 
 # Data Viz
 
-Seaborn color palettes - https://seaborn.pydata.org/tutorial/color_palettes.html
-- color blind palatte 
+Seaborn 
+- color palettes - https://seaborn.pydata.org/tutorial/color_palettes.html
+	- color blind palatte looking v attractive
+- annotating charts
+	- https://balaji4u.medium.com/adding-annotations-to-seaborn-plots-5e5b134140c8
+	- https://www.python-graph-gallery.com/46-add-text-annotation-on-scatterplot
+		- Good examples
+- lineplot 
+	- 	https://seaborn.pydata.org/generated/seaborn.lineplot.html
 
-Font Awesome - https://fontawesome.com/docs/web/setup/get-started
-- For icons in folium
-
-https://holoviews.org - Plotting w/ python
-- ' open-source Python library designed to make data analysis and visualization seamless and simple'
-- Gallery - https://holoviews.org/gallery/index.html
+Plotly
+- candlestick charting - https://plotly.com/python/candlestick-charts/
 
 Figure Factory (Plotly)
 - https://plotly.com/python/figure-factory-table/
 	- Advanced viz for data sci 
 	- Hist > https://plotly.com/python/distplot/
 
-Plotly candlestick charting - https://plotly.com/python/candlestick-charts/
+Matplotlib
+- quickstart guide https://matplotlib.org/stable/tutorials/introductory/quick_start.html#sphx-glr-tutorials-introductory-quick-start-py
+
+Font Awesome - https://fontawesome.com/docs/web/setup/get-started
+- For icons in folium
+
+https://holoviews.org
+- ' open-source Python library designed to make data analysis and visualization seamless and simple'
+- Gallery - https://holoviews.org/gallery/index.html
 
 ### *Articles*
 
-scatter plots - https://pythongeeks.org/python-scatter-plot/
+scatter plots 
+- https://pythongeeks.org/python-scatter-plot/
+- regression on scatters
+	- https://www.statology.org/scatterplot-with-regression-line-python/
+
 
 Highlighting datapoints in scatterplots
 - https://cmdlinetips.com/2019/11/how-to-highlight-data-points-with-colors-and-text-in-python/
@@ -426,6 +600,7 @@ Highlighting datapoints in scatterplots
 How to create two y-axis matplotlib
 - https://www.statology.org/matplotlib-two-y-axes/
 	- questionable if you should even make these 
+
 
 
 ### *Dashboards*
@@ -811,6 +986,9 @@ Hotkeys - http://allhotkeys.com/microsoft_excel_hotkeys.html
 Excel filter text by string length 
 - `???` = len string is 3 
 
+Linking to other tabs and webpages - https://tinyurl.com/yc6af9ph
+- `Ctrl-k`
+
 
 
 
@@ -830,6 +1008,10 @@ https://webflow.com
 
 HTML - https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
 
+Ruby on Rails 
+- Intro / what is it > https://railsware.com/blog/ruby-on-rails-guide/
+- Web dev framework
+
 Jekyll - https://jekyllrb.com
 - https://github.com/topics/jekyll-theme
 	- blog-aware, site generator written in Ruby. It takes raw text files, runs it through a renderer and produces a publishable static website
@@ -843,8 +1025,17 @@ Domains
 - ICANN - https://www.icann.org
 - Costs related to domains - https://websitesetup.org/how-much-costs-domain-name/
 
+# News
+
+https://thehackernews.com/
+
 
 # Other Articles
+
+https://www.codegrepper.com/index.php
+-  code examples
+
+LaTex for python math formulas - https://github.com/google/latexify_py
 
 https://github.com/jivoi/awesome-osint
 - open source intelligence tools and resources
