@@ -62,8 +62,6 @@ Articles on shortcuts & hotkeys
 - Leetcode.com - https://leetcode.com/problemset/all/
 - 100 days challenge 
 	- Resources - https://www.100daysofcode.com/resources/
-	- Go through these
-	- Start using markdown
 
 - Coding Interview Uni - https://github.com/jwasham/coding-interview-university
 	- FAANG interview prep
