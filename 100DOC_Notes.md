@@ -5,11 +5,15 @@
 - [Hotkeys](#hotkeys)
 - [Learn](#learn)
 - [Python](#python)
+	- [Gits](#gits)
 - [Pandas](#pandas)
 - [Data Science](#data-sci)
+	- [Numpy](#numpy)
+	- [Scipy](#scipy)
 	- [Jupyter](#jupyter)
 	- [Datetime](#datetime)
 - [Data Viz](#data-viz)
+	- [Seaborn](#seaborn)
 	- [Dashboards](#dashboards)
 - [SQL](#sql)
 - [APIs](#apis)
@@ -79,11 +83,14 @@ ___
 # Python 
 *general python notes*
 
-Os.makedirs() - https://www.geeksforgeeks.org/python-os-makedirs-method/
-
 `ctrl+c` Kills python scripts mid run
 
-Awesome Python (git resources)- https://github.com/vinta/awesome-python#readme
+`dir(module)` - shows what commands are available
+Good to see what options are available
+
+`Os.makedirs()` - https://www.geeksforgeeks.org/python-os-makedirs-method/
+
+Awesome Python (git resources) - https://github.com/vinta/awesome-python#readme
 
 Python apps to use for dev - https://twitter.com/pyquantnews/status/1559514346396520451?s=20&t=5XOg4-ws-T4Gf-Xcf-CJhA
 - Voila 
@@ -200,8 +207,6 @@ Converting CSV to pdf - https://www.geeksforgeeks.org/how-to-convert-csv-file-to
 https://www.programcreek.com/python/
 - Search for code, shows examples
 
-You-get (youtube dl) - https://github.com/soimort/you-get
-
 Fuzz string matching
 - Fuzz git - https://github.com/seatgeek/fuzzywuzzy
 - https://towardsdatascience.com/string-matching-with-fuzzywuzzy-e982c61f8a84
@@ -213,17 +218,39 @@ Fuzz string matching
 - String matching - https://typesense.org/learn/fuzzy-string-matching-python/
 
 
-Ultimate python resource hub (git) - https://github.com/ayushi7rawat/Ultimate-Python-Resource-Hub
-- LOTS OF GREAT RESOURCES
-- Look into for practice material
-
-
 Plyer - library for accessing features of your hardware / platforms
 - Docs - https://plyer.readthedocs.io/en/latest/#
 - Articles 
 	- https://www.geeksforgeeks.org/python-desktop-notifier-using-plyer-module/
 		- Desktop notifications
 	- https://medium.com/analytics-vidhya/create-desktop-notifier-using-python-6dab0a1c348c
+
+
+### *Gits*
+
+https://github.com/AlgoSkyNet/freqtrade
+https://github.com/cgdeboer/rigger
+- Random identity generator
+
+https://github.com/cgdeboer/iteround
+- sum-safe rounding library for Python iterables
+
+https://github.com/AykutSarac/jsoncrack.com
+- JSON crack - easily viz JSONs as graphs
+
+https://github.com/resemble-ai
+- Speech AI
+
+https://github.com/tensortrade-org/tensortrade
+https://github.com/topics/git-scraping
+- Git scraping
+
+https://github.com/ayushi7rawat/Ultimate-Python-Resource-Hub
+- Ultimate python resource hub
+- Look into for practice material
+
+https://github.com/soimort/you-get
+- youtube downloader
 
 # Pandas
 
@@ -446,6 +473,10 @@ str.contains
 
 *Other Info*
 
+What Is `[::-1]` in Python?
+- [::-1] means reversing a string, list, or any iterable with an ordering
+- reverse slicing - https://www.codingem.com/reverse-slicing-in-python/
+
 Effective pandas (book/git) - https://github.com/mattharrison/effective_pandas_book
 
 Working with index
@@ -499,11 +530,17 @@ Reordering columns
 		
 
 
-
-
-
 # Data Sci
 *python for data science*
+
+Ice Cream - https://github.com/gruns/icecream
+- helps visualize data workflow
+- Never use print() to debug again
+
+
+PCA 
+- https://towardsdatascience.com/principal-component-analysis-algorithm-in-real-life-discovering-patterns-in-a-real-estate-dataset-18134c57ffe7
+
 
 QQ Plots (quantile-quantile)
 - Understanding them - https://data.library.virginia.edu/understanding-q-q-plots/
@@ -518,12 +555,39 @@ Texthero - https://texthero.org
 Dataquest - https://community.dataquest.io
 - Look into getting in the slack channel
 
+
+### *Numpy*
+
+.where()
+- Multiple conditions - https://www.statology.org/numpy-where-multiple-conditions/
+
+.select() 
+- https://numpy.org/doc/stable/reference/generated/numpy.select.html
+- Return an array drawn from elements in choicelist, depending on conditions.
+- Difference between where and select - https://towardsdatascience.com/the-difference-between-where-and-select-functions-of-python-numpy-9c81273ed5fb
+
+
+### *Scipy*
+- z-scores 
+	- https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.zscore.html
+	- calc z-score from scratch - https://datagy.io/python-z-score/
+
+
+
 ### *Jupyter*
 Nbviewer - https://nbviewer.org
 - 'simple way to share jupyter notebooks'
 - good examples w/ code on their homepage
 
+Docker
+
 Dockerizing jupyter projects - https://towardsdatascience.com/dockerizing-jupyter-projects-39aad547484a
+
+How to run jupyter on docker - https://towardsdatascience.com/how-to-run-jupyter-notebook-on-docker-7c9748ed209f
+- 'Docker simplifies and accelerates your workflow, while giving developers the freedom to innovate with their choice of tools, application stacks, and deployment environments for each project.'
+
+Dark mode
+-  https://medium.datadriveninvestor.com/how-can-i-customize-jupyter-notebook-into-dark-mode-7985ce780f38
 
 
 *Blogs*
@@ -542,6 +606,21 @@ Dockerizing jupyter projects - https://towardsdatascience.com/dockerizing-jupyte
 
 selecting a date range
 - `df2 = df.loc['2022-1-1' : '2022-7-4']`
+
+Changing datetime formats with strftime 
+- https://pynative.com/python-datetime-format-strftime/
+	- `.strftime("%Y-%m-%d")`
+	- DROPS HOURS/MIN/SEC FROM DATETIME COLUMN
+	- `data.reset_index(inplace = True)
+		data['Date'] = data['Date'].dt.strftime("%Y-%m-%d")
+data.set_index('Date', inplace=True) `
+
+plotting dates
+- 	`ax = data.plot(x='Date', y='Close', figsize=(12,6))
+	xcoords = ['2015-01-01', '2016-01-01','2017-01-01', '2018-01-01', '2019-01-01', '2020-01-01',
+	          '2021-01-01']
+	for xc in xcoords:
+    plt.axvline(x=xc, color='black', linestyle='--')`
 
 Dateutil 
 - Timezones 
@@ -595,7 +674,9 @@ Removing $ sign from data columns
 
 # Data Viz
 
-Seaborn 
+### *Seaborn*
+- Setting titles 
+	- `.set(title='Chart Name')`
 - color palettes - https://seaborn.pydata.org/tutorial/color_palettes.html
 	- color blind palatte looking v attractive
 - annotating charts
@@ -604,6 +685,14 @@ Seaborn
 		- Good examples
 - lineplot 
 	- 	https://seaborn.pydata.org/generated/seaborn.lineplot.html
+	- `.lineplot()`
+- stacked barplot
+	- `.plot(kind='bar', stacked=True)`
+	- https://www.statology.org/seaborn-stacked-bar-plot/
+	- https://stackoverflow.com/questions/67320415/stacked-barplot-in-seaborn-using-numeric-data-as-hue
+- Multiple time series 
+	- https://seaborn.pydata.org/examples/timeseries_facets.html
+
 
 Plotly
 - candlestick charting - https://plotly.com/python/candlestick-charts/
@@ -622,6 +711,12 @@ Font Awesome - https://fontawesome.com/docs/web/setup/get-started
 https://holoviews.org
 - ' open-source Python library designed to make data analysis and visualization seamless and simple'
 - Gallery - https://holoviews.org/gallery/index.html
+
+https://pyecharts.org/#/en-us/
+- `pip install pyecharts`
+- Python based, highly interactive and highly performant javascript visualization library
+	- Check out the scatterplot
+	- has sliding scale that removes values like a filter
 
 ### *Articles*
 
@@ -675,15 +770,19 @@ Streamlit
 
 Using indexing - https://use-the-index-luke.com
 
-Other resources
--   https://twitter.com/SumanDe36754787/status/1559885703969837056?s=20&t=162meZF2BKo0E77q2SdZAQ
+
+DBMS - https://medium.com/codex/database-management-system-2e1198ca2136
+
+Data lemur - https://datalemur.com/
+- Shows questions from interviews @ top companies (FANG)
 
 W3 School SQL - https://www.w3schools.com/SQl/default.asp
 
 Learn relational DBs
 	- https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/
 
-DBMS - https://medium.com/codex/database-management-system-2e1198ca2136
+Other resources
+-   https://twitter.com/SumanDe36754787/status/1559885703969837056?s=20&t=162meZF2BKo0E77q2SdZAQ
 
 Microsoft Access - https://www.microsoft.com/en-us/microsoft-365/access
 
