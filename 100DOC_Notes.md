@@ -265,6 +265,14 @@ Plyer - library for accessing features of your hardware / platforms
 .convert
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.convert_dtypes.html
 
+.cumprod() 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.cumprod.html
+- cumulative product over a DataFrame
+
+.cumsum()
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.cumsum.html
+
+
 .date_range 
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.date_range.html
 - `date_range(start=  , end=  )`
@@ -291,6 +299,10 @@ Plyer - library for accessing features of your hardware / platforms
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html
 - Groupby sum - https://www.datasciencemadesimple.com/group-by-sum-in-pandas-dataframe-python-2/
 
+.grouper 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Grouper.html
+- Similar to groupby and also used in conjunction with groupby
+
 .iat 
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iat.html
 - Access a single value for a row/column pair by integer position.
@@ -298,8 +310,12 @@ Plyer - library for accessing features of your hardware / platforms
 
 
 .idxmin - returns min 
+
 .idxmax - returns max
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmax.html
+
+.iloc 
+- `.iloc[:, 1:]` - selects the last row
 
 .insert
 - `.insert(loc=1, column='City', value=city)`
@@ -310,9 +326,17 @@ Plyer - library for accessing features of your hardware / platforms
 - https://datatofish.com/rows-with-nan-pandas-dataframe/
 - `df[df['column name'].isna()]`
 
+.isnull()
+- `isnull().sum()` - returns total null values in column
+
 .json.normalize
 - Used on API calls
 	- Makes output moar pretty
+
+.le() 
+- less than or equal to <=
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.le.html
+-  (eq, ne, le, lt, ge, gt) other similar comparison operators
 
 .loc 
 - `Df.loc['row name'] = df.sum()`
@@ -323,6 +347,10 @@ Plyer - library for accessing features of your hardware / platforms
 .mask 
 - replace value where condition is true
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mask.html
+
+.melt() 
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.melt.html
+- Unpivot df from wide to long
 
 .merge
 - Joins dfs
@@ -340,6 +368,10 @@ Plyer - library for accessing features of your hardware / platforms
 - https://thecleverprogrammer.com/2021/12/28/query-data-using-python/
 - Essentially a filter
 
+.rank()
+- % rank - `.rank(pct=True)`
+- `df.rolling(10).apply(lambda x: x.rank(pct=True).iloc[-1])`
+	- Specifies rolling window
 
 .read 
 - `.read_csv` - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
@@ -359,10 +391,16 @@ Plyer - library for accessing features of your hardware / platforms
 - Single values in df 
 	- https://stackoverflow.com/questions/50938519/trying-to-change-a-single-value-in-pandas-dataframe
 
+.resample()
+- `df4 = df3.resample('W').last()`
+	- weekly resample, using last value
+
 .reset_index
 - Docs - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.reset_index.html
 - https://www.geeksforgeeks.org/reset-index-in-pandas-dataframe/
 
+.set_option('precision', 2)
+- Sets round display to 2 without rounding
 
 .sort_values
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_values.html
@@ -376,6 +414,8 @@ str.contains
 - Extract capture groups in the regex pat as columns in a DataFrame
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.extract.html
 
+.strftime() 
+- https://www.geeksforgeeks.org/python-pandas-datetimeindex-strftime/
 
 .str.split
 - https://www.geeksforgeeks.org/python-pandas-split-strings-into-two-list-columns-using-str-split/
