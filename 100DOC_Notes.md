@@ -764,8 +764,6 @@ Streamlit
 
 
 
-
-
 # SQL
 
 Using indexing - https://use-the-index-luke.com
@@ -871,9 +869,9 @@ Guide - https://www.markdownguide.org/
 
 Links
 -   *Interdocument links* - https://github.com/aogilvie/markdownLinkTest#small-title
-    - Start using these
-	- Look at the raw code for examples
+	- see raw code for examples
     - takes # in front of link to reference
+	-		[Seaborn](100DOC_Notes.md#seaborn) 		
     - https://raw.githubusercontent.com/aogilvie/markdownLinkTest/master/README.md
 	- W3 links info - https://www.w3schools.io/file/markdown-links/
 
@@ -1068,8 +1066,15 @@ Virtual box - https://www.virtualbox.org/manual/UserManual.html
 
 Visual Studio
 
-- How to change the interpreter - https://stackoverflow.com/questions/47602151/how-to-change-interpreter-in-visual-studio-code
-- `ctrl + shit + p`
+shortcuts 
+- `ctrl + d`
+	- select item > `ctrl + d` to select next item, next, next etc.. then replace
+
+How to change the interpreter - https://stackoverflow.com/questions/47602151/how-to-change-interpreter-in-visual-studio-code
+ - `ctrl + shit + p`
+
+
+
 
 ### Anaconda
 
