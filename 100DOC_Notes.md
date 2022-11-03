@@ -33,6 +33,7 @@
 - [Hacking](#hacking)
 - [Excel](#excel)
 - [Web Dev](#web-dev)
+	- [Flask](#flask)
 - [News](#news)
 - [Other Articles](#other-articles)
 
@@ -42,12 +43,17 @@ ___
 
 - Home (key)  - jump to top of page
 - End (key) - jump to bottom
-- Alt + Tab  - switch b/w open programs
-- Alt + ←  - web page back
-- Ctrl + L  - lock computer
-- Ctrl + X  - cut
-- Ctrl + Y  - redo
-- Ctrl + Z  - undo
+- `Shift + F5` - reload webpage
+- `Alt + Tab`  - switch b/w open programs
+- `Alt + ←`  - web page back
+- `Ctrl + L`  - lock computer
+- `Ctrl + X`  - cut
+- `Ctrl + Y`  - redo
+- `Ctrl + Z`  - undo
+
+Visual Studio
+- `ctrl d` - selects next same item, replace
+- `ctrl + k (release) + o` - opens active file in new window
 
 Articles on shortcuts & hotkeys
 - https://www.computerhope.com/shortcut.htm
@@ -89,6 +95,8 @@ ___
 Good to see what options are available
 
 `Os.makedirs()` - https://www.geeksforgeeks.org/python-os-makedirs-method/
+
+.map() - https://realpython.com/python-map-function/
 
 Awesome Python (git resources) - https://github.com/vinta/awesome-python#readme
 
@@ -397,8 +405,12 @@ https://github.com/soimort/you-get
 
 .rank()
 - % rank - `.rank(pct=True)`
-- `df.rolling(10).apply(lambda x: x.rank(pct=True).iloc[-1])`
+	- `df['%rank']=df.column_name.rank(pct=True)`
+- rolling % rank - `df.rolling(10).apply(lambda x: x.rank(pct=True).iloc[-1])`
 	- Specifies rolling window
+	- https://stackoverflow.com/questions/53584774/rolling-percent-rank-in-pandas
+
+- 
 
 .read 
 - `.read_csv` - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
@@ -1059,6 +1071,10 @@ Pip env
 - Not recognized - https://stackoverflow.com/questions/69795302/pipenv-is-not-recognized-as-an-internal-or-external-command-operable-program
 - Installing packages with pipenv - slow - https://github.com/pypa/pipenv/issues/2873
 
+Poetry (dependency mgmt)
+- Similar to virtual env 
+- https://python-poetry.org/docs/
+- Poetry vs venv - https://serpapi.com/blog/python-virtual-environments-using-virtualenv-and-poetry/
 
 Virtual box - https://www.virtualbox.org/manual/UserManual.html
 
@@ -1149,6 +1165,23 @@ https://webflow.com
 [Wix](Wix.com) - website builder
 
 HTML - https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
+
+Emmet 
+- plugin, improves HTML, CSS workflow
+- Cheat sheet shortcuts -https://docs.emmet.io/cheat-sheet/
+- Emmet in VSCode - https://code.visualstudio.com/docs/editor/emmet
+
+### *Flask*
+
+https://flask.palletsprojects.com/en/2.2.x/
+- QuickStart
+	- Runs to local host type setup
+- Command line 
+	- `flask run`
+	- `flask --debug run`
+- Disabling cache for dev tools
+	- https://stackoverflow.com/questions/5690269/disabling-chrome-cache-for-website-development
+
 
 Ruby on Rails 
 - Intro / what is it > https://railsware.com/blog/ruby-on-rails-guide/
