@@ -33,5 +33,6 @@
 - [Hacking](100DOC_Notes.md#hacking)
 - [Excel](100DOC_Notes.md#excel)
 - [Web Dev](100DOC_Notes.md#web-dev)
+	- [Flask](100DOC_Notes.md#flask)
 - [News](100DOC_Notes.md#news)
 - [Other Articles](100DOC_Notes.md#other-articles)
