@@ -34,5 +34,6 @@
 - [Excel](100DOC_Notes.md#excel)
 - [Web Dev](100DOC_Notes.md#web-dev)
 	- [Flask](100DOC_Notes.md#flask)
+	- [Java](100DOC_Notes.md#Java)
 - [News](100DOC_Notes.md#news)
 - [Other Articles](100DOC_Notes.md#other-articles)

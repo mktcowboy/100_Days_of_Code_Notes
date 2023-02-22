@@ -5,16 +5,25 @@
 - [Hotkeys](#hotkeys)
 - [Learn](#learn)
 - [Python](#python)
+	- [RegEx](#regex)
 	- [Gits](#gits)
 - [Pandas](#pandas)
+    - [Pandas Articles](#pandas-articles)
 - [Data Science](#data-sci)
+    - [Blogs](#blogs)
 	- [Numpy](#numpy)
 	- [Scipy](#scipy)
 	- [Jupyter](#jupyter)
 	- [Datetime](#datetime)
 - [Data Viz](#data-viz)
+	- [Matplotlib](#matplotlib)
 	- [Seaborn](#seaborn)
+	- [Plotly](#plotly)
 	- [Dashboards](#dashboards)
+		- [Dash](#dash)
+		- [Streamlit](#streamlit)
+		- [Grafana](#grafana)
+	- [Data Viz Articles](#data-viz-articles)
 - [SQL](#sql)
 - [APIs](#apis)
 - [Scraping](#scraping)
@@ -34,6 +43,10 @@
 - [Excel](#excel)
 - [Web Dev](#web-dev)
 	- [Flask](#flask)
+	- [Java](#java)
+	- [RubyonRails](#ruby-on-rails)
+	- [Jekyll](#jekyll)
+	- [Domains](#domains)
 - [News](#news)
 - [Other Articles](#other-articles)
 
@@ -204,6 +217,8 @@ Papermill - https://papermill.readthedocs.io/en/latest/usage-parameterize.html
 code snippets - https://towardsdatascience.com/13-useful-python-snippets-that-you-need-to-know-91580af9b1f6
 
 Converting CSV to pdf - https://www.geeksforgeeks.org/how-to-convert-csv-file-to-pdf-file-using-python/
+- pypdf and tabula 
+	- https://stackoverflow.com/questions/56017702/how-to-extract-table-from-pdf-in-python
 - pdfkit
     - Installing - https://anaconda.org/conda-forge/python-pdfkit
 	- https://pypi.org/project/pdfkit/
@@ -233,6 +248,21 @@ Plyer - library for accessing features of your hardware / platforms
 		- Desktop notifications
 	- https://medium.com/analytics-vidhya/create-desktop-notifier-using-python-6dab0a1c348c
 
+---
+
+### RegEx
+
+converters - english to regex
+- https://regex101.com
+- https://www.autoregex.xyz
+
+Separating columns by characters
+	- https://stackoverflow.com/questions/67223873/separate-column-data-based-on-comma-characters-using-pandas-regex
+
+Removing $ signs from strings
+- `.replace( '[\$,)]','', regex=True)`
+
+---
 
 ### *Gits*
 
@@ -261,6 +291,26 @@ https://github.com/soimort/you-get
 - youtube downloader
 
 # Pandas
+
+### Pandas Articles
+
+
+Filtering dataframes
+- https://medium.com/@jobethmuncy/different-ways-to-view-a-pandas-dataframe-528d193b7320
+    - `df.loc[df['column'].isnull()]`
+		- Null values in certain column
+	- `df.loc[df['column'] >= 100, :]`
+		- filtering for >=
+	- `df[df['Lot Frontage'].between(50, 60)]`
+		- filtering for between
+	- `df[~df['Lot Frontage'].between(50, 60)`
+		- `~` character returns instances NOT between those values
+	- `df.loc[(df['column'] >= 1000) & (df['column'] > 100)]`
+		- two different filters
+	- `df['column'].unique()`
+		- shows unique values
+
+--- 
 
 .append 
 - Examples of using this method https://datascienceparichay.com/article/append-rows-to-a-pandas-dataframe/
@@ -531,9 +581,6 @@ If statements
 	- https://datatofish.com/if-condition-in-pandas-dataframe/
 
 
-Separating columns by characters
-	- https://stackoverflow.com/questions/67223873/separate-column-data-based-on-comma-characters-using-pandas-regex
-
 Reordering columns
 - https://datagy.io/reorder-pandas-columns/
 - `.insert(loc=1, column='City', value=city)`
@@ -545,10 +592,14 @@ Reordering columns
 # Data Sci
 *python for data science*
 
+Numerize - https://github.com/davidsa03/numerize
+- used to show large numbers into its readable format
+    - 1000000 -> 1M
+- https://www.geeksforgeeks.org/python-numerize-library/
+
 Ice Cream - https://github.com/gruns/icecream
 - helps visualize data workflow
 - Never use print() to debug again
-
 
 PCA 
 - https://towardsdatascience.com/principal-component-analysis-algorithm-in-real-life-discovering-patterns-in-a-real-estate-dataset-18134c57ffe7
@@ -567,7 +618,20 @@ Texthero - https://texthero.org
 Dataquest - https://community.dataquest.io
 - Look into getting in the slack channel
 
+--- 
+### *Blogs*
+- https://datascienceparichay.com
+- https://www.sarem-seitz.com/
+	- Forecasting with Decision Trees and Random Forests https://www.sarem-seitz.com/forecasting-with-decision-trees-and-random-forests/
+- https://cmdlinetips.com
+	- advanced topics like stats for ML
+- https://www.tomasbeuzen.com/python-programming-for-data-science/README.html
+    - Stopped here - https://www.tomasbeuzen.com/python-programming-for-data-science/chapters/chapter2-loops-functions.html
+- https://www.analyticsvidhya.com/blog/
+	- Stats 
+- https://www.kdnuggets.com
 
+--- 
 ### *Numpy*
 
 .where()
@@ -578,14 +642,14 @@ Dataquest - https://community.dataquest.io
 - Return an array drawn from elements in choicelist, depending on conditions.
 - Difference between where and select - https://towardsdatascience.com/the-difference-between-where-and-select-functions-of-python-numpy-9c81273ed5fb
 
-
+---
 ### *Scipy*
 - z-scores 
 	- https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.zscore.html
 	- calc z-score from scratch - https://datagy.io/python-z-score/
 
 
-
+---
 ### *Jupyter*
 Nbviewer - https://nbviewer.org
 - 'simple way to share jupyter notebooks'
@@ -601,19 +665,7 @@ How to run jupyter on docker - https://towardsdatascience.com/how-to-run-jupyter
 Dark mode
 -  https://medium.datadriveninvestor.com/how-can-i-customize-jupyter-notebook-into-dark-mode-7985ce780f38
 
-
-*Blogs*
-- https://datascienceparichay.com
-- https://www.sarem-seitz.com/
-	- Forecasting with Decision Trees and Random Forests https://www.sarem-seitz.com/forecasting-with-decision-trees-and-random-forests/
-- https://cmdlinetips.com
-	- advanced topics like stats for ML
-- https://www.tomasbeuzen.com/python-programming-for-data-science/README.html
-    - Stopped here - https://www.tomasbeuzen.com/python-programming-for-data-science/chapters/chapter2-loops-functions.html
-- https://www.analyticsvidhya.com/blog/
-	- Stats 
-- https://www.kdnuggets.com
-
+--- 
 ### *Datetime*
 
 selecting a date range
@@ -686,6 +738,20 @@ Removing $ sign from data columns
 
 # Data Viz
 
+### *Matplotlib*
+quickstart guide 
+- https://matplotlib.org/stable/tutorials/introductory/quick_start.html#sphx-glr-tutorials-introductory-quick-start-py
+
+`%matplotlib inline` - for jupyter notebooks plotting
+
+- retina display settings
+    - high resolution plotting
+	- `%config InlineBackend.figure_format = "retina"`
+    - https://www.delftstack.com/howto/matplotlib/matplotlib-retina/
+    
+
+---
+
 ### *Seaborn*
 - Setting titles 
 	- `.set(title='Chart Name')`
@@ -705,8 +771,8 @@ Removing $ sign from data columns
 - Multiple time series 
 	- https://seaborn.pydata.org/examples/timeseries_facets.html
 
-
-Plotly
+---
+### *Plotly*
 - candlestick charting - https://plotly.com/python/candlestick-charts/
 
 Figure Factory (Plotly)
@@ -714,23 +780,48 @@ Figure Factory (Plotly)
 	- Advanced viz for data sci 
 	- Hist > https://plotly.com/python/distplot/
 
-Matplotlib
-- quickstart guide https://matplotlib.org/stable/tutorials/introductory/quick_start.html#sphx-glr-tutorials-introductory-quick-start-py
 
-Font Awesome - https://fontawesome.com/docs/web/setup/get-started
-- For icons in folium
 
-https://holoviews.org
-- ' open-source Python library designed to make data analysis and visualization seamless and simple'
-- Gallery - https://holoviews.org/gallery/index.html
+---
+### *Dashboards*
 
-https://pyecharts.org/#/en-us/
-- `pip install pyecharts`
-- Python based, highly interactive and highly performant javascript visualization library
-	- Check out the scatterplot
-	- has sliding scale that removes values like a filter
+### Dash
+- https://towardsdatascience.com/plotly-dashboards-in-python-28a3bb83702c
+- Plotly Dash gallery https://dash.gallery/Portal/
+- React for python devs - https://dash.plotly.com/react-for-python-developers
 
-### *Articles*
+
+
+### Streamlit 
+- Installing - https://docs.streamlit.io/library/get-started/installation
+- Syntax error hello world - https://stackoverflow.com/questions/72548682/streamlit-run-file-name-py-syntaxerror-invalid-syntax
+	- Need to open through anaconda navigator > new > cmd
+- Getting started = https://docs.streamlit.io/library/get-started
+- Create an app - https://docs.streamlit.io/library/get-started/create-an-app
+- Main concepts - https://docs.streamlit.io/library/get-started/main-concepts
+- API reference docs - https://docs.streamlit.io/library/api-reference
+	- St.write() - https://docs.streamlit.io/library/api-reference/write-magic/st.write
+	- Magic - https://docs.streamlit.io/library/api-reference/write-magic/magic
+- *Articles*
+	- Awesome streamlit - https://awesome-streamlit.readthedocs.io/en/latest/_copy_of_project_root/README.html
+	- Peruse for info, help etc..
+	- Getting started w/ stock charts - https://medium.com/geekculture/getting-started-with-streamlit-ed81eafcb298
+		- References yfinance 
+	- Cannot be instantiated - https://github.com/streamlit/streamlit/issues/5140
+	- In depth intro - https://medium.com/towards-data-science/streamlit-101-an-in-depth-introduction-fc8aad9492f2
+
+
+### *Grafana*
+
+https://grafana.com/docs/grafana/latest/
+- popular with traders for managing systems
+
+what is grafana
+- https://medium.com/globant/grafana-up-and-running-what-is-grafana-f519e9ae8749
+	- provides monitoring capabilities using diverse statistical visualizations at the time that allows you to integrate multiple data sources over the same platform.
+
+--- 
+### *Data Viz Articles*
 
 scatter plots 
 - https://pythongeeks.org/python-scatter-plot/
@@ -746,34 +837,18 @@ How to create two y-axis matplotlib
 - https://www.statology.org/matplotlib-two-y-axes/
 	- questionable if you should even make these 
 
+Font Awesome - https://fontawesome.com/docs/web/setup/get-started
+- For icons in folium
 
+https://holoviews.org
+- ' open-source Python library designed to make data analysis and visualization seamless and simple'
+- Gallery - https://holoviews.org/gallery/index.html
 
-### *Dashboards*
-Dash
-- https://towardsdatascience.com/plotly-dashboards-in-python-28a3bb83702c
-- Plotly Dash gallery https://dash.gallery/Portal/
-- React for python devs - https://dash.plotly.com/react-for-python-developers
-
-
-
-Streamlit 
-- Installing - https://docs.streamlit.io/library/get-started/installation
-- Syntax error hello world - https://stackoverflow.com/questions/72548682/streamlit-run-file-name-py-syntaxerror-invalid-syntax
-	- Need to open through anaconda navigator > new > cmd
-- Getting started = https://docs.streamlit.io/library/get-started
-- Create an app - https://docs.streamlit.io/library/get-started/create-an-app
-- Main concepts - https://docs.streamlit.io/library/get-started/main-concepts
-- API reference docs - https://docs.streamlit.io/library/api-reference
-	- St.write() - https://docs.streamlit.io/library/api-reference/write-magic/st.write
-	- Magic - https://docs.streamlit.io/library/api-reference/write-magic/magic
-- Articles 
-	- Awesome streamlit - https://awesome-streamlit.readthedocs.io/en/latest/_copy_of_project_root/README.html
-	- Peruse for info, help etc..
-	- Getting started w/ stock charts - https://medium.com/geekculture/getting-started-with-streamlit-ed81eafcb298
-		- References yfinance 
-	- Cannot be instantiated - https://github.com/streamlit/streamlit/issues/5140
-	- In depth intro - https://medium.com/towards-data-science/streamlit-101-an-in-depth-introduction-fc8aad9492f2
-
+https://pyecharts.org/#/en-us/
+- `pip install pyecharts`
+- Python based, highly interactive and highly performant javascript visualization library
+	- Check out the scatterplot
+	- has sliding scale that removes values like a filter
 
 
 # SQL
@@ -1112,6 +1187,7 @@ https://medium.com/beyondx/
 virtual-machine-tutorial-9043f0fce02b
 	- Virtualbox tutorial
 
+
 # Hacking
 Beginner hacking info 
 - https://medium.com/@toxglot/3-things-to-do-if-you-want-to-be-a-penetration-tester-168e6d52be31
@@ -1182,19 +1258,28 @@ https://flask.palletsprojects.com/en/2.2.x/
 - Disabling cache for dev tools
 	- https://stackoverflow.com/questions/5690269/disabling-chrome-cache-for-website-development
 
+### *Java*
 
-Ruby on Rails 
+Tutorials 
+- https://www.digitalocean.com/community/tutorials/java-web-application-tutorial-for-beginners
+
+Installing Java on path for pdf reading
+- https://stackoverflow.com/questions/54817211/java-command-is-not-found-from-this-python-process-please-ensure-java-is-inst
+
+
+### *Ruby on Rails*
 - Intro / what is it > https://railsware.com/blog/ruby-on-rails-guide/
-- Web dev framework
+	- Web dev framework
 
-Jekyll - https://jekyllrb.com
+### *Jekyll*
+- https://jekyllrb.com
 - https://github.com/topics/jekyll-theme
 	- blog-aware, site generator written in Ruby. It takes raw text files, runs it through a renderer and produces a publishable static website
 	- Beautiful jekyll - https://github.com/daattali/beautiful-jekyll
 		- ready-to-use templates, nice websites quickly
 
 
-Domains 
+### *Domains*
 - How to register - https://websitesetup.org/how-to-register-domain-name/
 - How to get free domains - https://sitechecker.pro/how-to-get-free-domain-name/
 - ICANN - https://www.icann.org
@@ -1204,8 +1289,13 @@ Domains
 
 https://thehackernews.com/
 
+https://thegradient.pub
+- good articles on compsi
+
 
 # Other Articles
+
+
 
 https://www.codegrepper.com/index.php
 -  code examples
