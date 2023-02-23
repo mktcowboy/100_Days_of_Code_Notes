@@ -10,11 +10,12 @@
 - [Pandas](#pandas)
     - [Pandas Articles](#pandas-articles)
 - [Data Science](#data-sci)
-    - [Blogs](#blogs)
 	- [Numpy](#numpy)
 	- [Scipy](#scipy)
 	- [Jupyter](#jupyter)
 	- [Datetime](#datetime)
+	- [DS Blogs](#ds-blogs)
+		- [DS Articles](#ds-articles)
 - [Data Viz](#data-viz)
 	- [Matplotlib](#matplotlib)
 	- [Seaborn](#seaborn)
@@ -618,18 +619,6 @@ Texthero - https://texthero.org
 Dataquest - https://community.dataquest.io
 - Look into getting in the slack channel
 
---- 
-### *Blogs*
-- https://datascienceparichay.com
-- https://www.sarem-seitz.com/
-	- Forecasting with Decision Trees and Random Forests https://www.sarem-seitz.com/forecasting-with-decision-trees-and-random-forests/
-- https://cmdlinetips.com
-	- advanced topics like stats for ML
-- https://www.tomasbeuzen.com/python-programming-for-data-science/README.html
-    - Stopped here - https://www.tomasbeuzen.com/python-programming-for-data-science/chapters/chapter2-loops-functions.html
-- https://www.analyticsvidhya.com/blog/
-	- Stats 
-- https://www.kdnuggets.com
 
 --- 
 ### *Numpy*
@@ -703,8 +692,22 @@ Dateparser - human readable dates
 - Works with relative dates
 - `parse('1 hour ago')`
 
+--- 
+### *DS Blogs*
+- https://datascienceparichay.com
+- https://www.sarem-seitz.com/
+	- Forecasting with Decision Trees and Random Forests https://www.sarem-seitz.com/forecasting-with-decision-trees-and-random-forests/
+- https://cmdlinetips.com
+	- advanced topics like stats for ML
+- https://www.tomasbeuzen.com/python-programming-for-data-science/README.html
+    - Stopped here - https://www.tomasbeuzen.com/python-programming-for-data-science/chapters/chapter2-loops-functions.html
+- https://www.analyticsvidhya.com/blog/
+	- Stats 
+- https://www.kdnuggets.com
 
-### *Articles*
+---
+
+### *DS Articles*
 
 Common excel formulas in python
 - https://medium.com/analytics-vidhya/common-excel-formulas-in-python-c5a7ce0ae07a

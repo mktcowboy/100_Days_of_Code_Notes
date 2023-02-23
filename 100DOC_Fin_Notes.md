@@ -33,3 +33,10 @@ Ta-lib in vscode
 IPOs
 - https://stockanalysis.com/ipos/
     - See for recent ipo names
+
+https://medium.com/@django2618/mastering-scalping-a-step-by-step-guide-to-implementing-a-high-frequency-trading-strategy-in-4c9600ff6705
+- Fin article HFT scalping strats
+
+http://b.scsi.to/ - Fin data sets need to DL
+
+https://quantocracy.com/ - Quant articles 
