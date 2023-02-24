@@ -9,10 +9,11 @@
 	- [Gits](#gits)
 - [Pandas](#pandas)
     - [Pandas Articles](#pandas-articles)
+	- [Methods](#methods)
 - [Data Science](#data-sci)
+	- [Jupyter](#jupyter)
 	- [Numpy](#numpy)
 	- [Scipy](#scipy)
-	- [Jupyter](#jupyter)
 	- [Datetime](#datetime)
 	- [DS Blogs](#ds-blogs)
 		- [DS Articles](#ds-articles)
@@ -30,9 +31,11 @@
 - [Scraping](#scraping)
 - [Markdown](#markdown)
 - [Google](#google)
+- [AI / ML](#ai--ml)
+	- [ChatGPT](#chatgpt)
+	- [OpenCV](#opencv)
+	- [Image Processing](#image-processing)
 - [Mapping](#mapping)
-- [Image Processing](#image-processing)
-- [OpenCV](#opencv)
 - [Comp Sci](#comp-sci)
 	- [CMD / Powershell](#cmd--powershell)
 	- [Virtual Envs](#virtual-environments)
@@ -267,6 +270,9 @@ Removing $ signs from strings
 
 ### *Gits*
 
+https://github.com/mmabrouk/chatgpt-wrapper
+- chatgpt wrapper
+
 https://github.com/AlgoSkyNet/freqtrade
 https://github.com/cgdeboer/rigger
 - Random identity generator
@@ -312,6 +318,7 @@ Filtering dataframes
 		- shows unique values
 
 --- 
+### Methods 
 
 .append 
 - Examples of using this method https://datascienceparichay.com/article/append-rows-to-a-pandas-dataframe/
@@ -593,6 +600,10 @@ Reordering columns
 # Data Sci
 *python for data science*
 
+R - based python libraries
+- https://rpy2.github.io/doc/latest/html/index.html
+	- run both R and Python together
+
 Numerize - https://github.com/davidsa03/numerize
 - used to show large numbers into its readable format
     - 1000000 -> 1M
@@ -619,8 +630,31 @@ Texthero - https://texthero.org
 Dataquest - https://community.dataquest.io
 - Look into getting in the slack channel
 
+---
+### *Jupyter*
 
---- 
+tips and tricks - https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
+ - Esc + F Find and replace on your code but not the outputs.
+ - `%config InlineBackend.figure_format ='retina'`
+	- Makes matplotlib HD output
+
+Nbviewer - https://nbviewer.org
+- 'simple way to share jupyter notebooks'
+- good examples w/ code on their homepage
+
+Docker
+
+- Dockerizing jupyter projects - https://towardsdatascience.com/dockerizing-jupyter-projects-39aad547484a
+
+- How to run jupyter on docker - https://towardsdatascience.com/how-to-run-jupyter-notebook-on-docker-7c9748ed209f
+	- 'Docker simplifies and accelerates your workflow, while giving developers the freedom to innovate with their choice of tools, application stacks, and deployment environments for each project.'
+
+Dark mode
+-  https://medium.datadriveninvestor.com/how-can-i-customize-jupyter-notebook-into-dark-mode-7985ce780f38
+
+
+---
+
 ### *Numpy*
 
 .where()
@@ -637,22 +671,6 @@ Dataquest - https://community.dataquest.io
 	- https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.zscore.html
 	- calc z-score from scratch - https://datagy.io/python-z-score/
 
-
----
-### *Jupyter*
-Nbviewer - https://nbviewer.org
-- 'simple way to share jupyter notebooks'
-- good examples w/ code on their homepage
-
-Docker
-
-Dockerizing jupyter projects - https://towardsdatascience.com/dockerizing-jupyter-projects-39aad547484a
-
-How to run jupyter on docker - https://towardsdatascience.com/how-to-run-jupyter-notebook-on-docker-7c9748ed209f
-- 'Docker simplifies and accelerates your workflow, while giving developers the freedom to innovate with their choice of tools, application stacks, and deployment environments for each project.'
-
-Dark mode
--  https://medium.datadriveninvestor.com/how-can-i-customize-jupyter-notebook-into-dark-mode-7985ce780f38
 
 --- 
 ### *Datetime*
@@ -825,6 +843,10 @@ what is grafana
 
 --- 
 ### *Data Viz Articles*
+
+https://altair-viz.github.io
+- another data viz package
+	- declarative statistical visualization library for Python, based on Vega and Vega-Lite
 
 scatter plots 
 - https://pythongeeks.org/python-scatter-plot/
@@ -1025,6 +1047,64 @@ Google alerts
 Adsense best practices - https://www.google.com/adsense/start/resources/best-practices-for-google-adsense/
 
 
+# AI / ML
+
+### ChatGPT
+- prompts
+	- prompts guide based on categories - https://share-docs.clickup.com/36128479/d/h/12ehpz-1187/bc2728462e9a971
+		- biz/accounting/marketing/sales/HR
+	- 10 use cases for chatgpt as an SWE https://twitter.com/sergiorocks/status/1613553920210604037?s=46&t=6B1gYE6eBOWxF1OeKEZjEw
+		- Using chat gpt for help coding
+	- Good examples of how to better use it
+https://medium.com/geekculture/using-chatgpt-in-python-eeaed9847e72
+	- python ChatGPT wrapper https://github.com/mmabrouk/chatgpt-wrapper
+		- Guide for linux - https://www.linuxuprising.com/2023/01/use-chatgpt-from-command-line-with-this.html
+Using wolfram to optimize chatgpt - https://twitter.com/DrJimFan/status/1615725708281581568?s=20&t=ndivpLpenPHTROWIX1AWXA
+ChatGPT to generate malware code - https://mashable.com/article/chatgpt-malware-ai-code
+
+---
+
+## OpenCV
+- https://www.askpython.com/python/examples/count-objects-in-an-image
+    - Count objects in pics 
+    - Good examples and implementation
+	- Wrote script on work comp, runs but quality is sus
+- https://medium.com/analytics-vidhya/detecting-and-counting-objects-with-opencv-b0f59bc1e111
+	- Has links to other good articles at the end
+- https://stackoverflow.com/questions/38619382/how-to-count-objects-in-image-using-python
+	- Counting objects in an image
+- https://www.geeksforgeeks.org/python-using-pil-imagegrab-and-pytesseract/
+    - Does a good job of processing image to get into 'readable' format
+    - Using imagegrab and pytesseract
+
+---
+
+## Image Processing
+- Improving the quality of images for text retrieval https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html
+	
+- CNN / DCNs for image recognition - https://towardsdatascience.com/convolutional-neural-networks-explained-how-to-successfully-classify-images-in-python-df829d4ba761
+
+https://www.instructables.com/Traffic-Speed-Camera-That-Recognizes-License-Plate/
+
+Image Recognition Repos 
+- https://github.com/gautamkumarjaiswal?after=Y3Vyc29yOnYyOpK5MjAxOS0wNC0yNlQwMzoyNTo1NC0wNTowMM4K8Rmr&tab=repositories
+
+Edge Impulse 
+- https://edgeimpulse.com
+
+Vizy AI camera
+	- https://docs.vizycam.com/doku.php
+
+Motion Scope
+	- https://docs.vizycam.com/doku.php?id=wiki:motionscope_app
+		○ Auto detections motion and speed
+
+
+DALLE-2 vs Midjourney vs StableDiffusion - https://tinyurl.com/3fyfrrj4
+
+Deepfake AI video - https://twitter.com/TedsLittleDream/status/1562836627885416449?s=20&t=xo_Zi6PrLsbp5O73YjKmDg
+- Check out how she made this, apps etc
+
 
 
 # Mapping
@@ -1073,45 +1153,6 @@ Mapping Articles
 Calculating distance between 2 points using Haversine
 - https://towardsdatascience.com/calculating-distance-between-two-geolocations-in-python-26ad3afe287b
 
-
-
-
-# Image Processing
-- Improving the quality of images for text retrieval https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html
-	
-- CNN / DCNs for image recognition - https://towardsdatascience.com/convolutional-neural-networks-explained-how-to-successfully-classify-images-in-python-df829d4ba761
-
-https://www.instructables.com/Traffic-Speed-Camera-That-Recognizes-License-Plate/
-
-Image Recognition Repos 
-- https://github.com/gautamkumarjaiswal?after=Y3Vyc29yOnYyOpK5MjAxOS0wNC0yNlQwMzoyNTo1NC0wNTowMM4K8Rmr&tab=repositories
-
-Vizy AI camera
-	- https://docs.vizycam.com/doku.php
-
-Motion Scope
-	- https://docs.vizycam.com/doku.php?id=wiki:motionscope_app
-		○ Auto detections motion and speed
-
-
-DALLE-2 vs Midjourney vs StableDiffusion - https://tinyurl.com/3fyfrrj4
-
-Deepfake AI video - https://twitter.com/TedsLittleDream/status/1562836627885416449?s=20&t=xo_Zi6PrLsbp5O73YjKmDg
-- Check out how she made this, apps etc
-
-
-## OpenCV
-- https://www.askpython.com/python/examples/count-objects-in-an-image
-    - Count objects in pics 
-    - Good examples and implementation
-	- Wrote script on work comp, runs but quality is sus
-- https://medium.com/analytics-vidhya/detecting-and-counting-objects-with-opencv-b0f59bc1e111
-	- Has links to other good articles at the end
-- https://stackoverflow.com/questions/38619382/how-to-count-objects-in-image-using-python
-	- Counting objects in an image
-- https://www.geeksforgeeks.org/python-using-pil-imagegrab-and-pytesseract/
-    - Does a good job of processing image to get into 'readable' format
-    - Using imagegrab and pytesseract
 
 # Comp Sci
 
