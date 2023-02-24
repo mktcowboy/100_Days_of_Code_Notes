@@ -29,12 +29,14 @@
 - [SQL](#sql)
 - [APIs](#apis)
 - [Scraping](#scraping)
+	- [Beautiful Soup](#beautiful-soup)
 - [Markdown](#markdown)
 - [Google](#google)
 - [AI / ML](#ai--ml)
 	- [ChatGPT](#chatgpt)
 	- [OpenCV](#opencv)
 	- [Image Processing](#image-processing)
+	- [XGBoost](#xgboost)
 - [Mapping](#mapping)
 - [Comp Sci](#comp-sci)
 	- [CMD / Powershell](#cmd--powershell)
@@ -771,9 +773,10 @@ quickstart guide
 
 Annotations - https://matplotlib.org/stable/tutorials/text/annotations.html
 
-Date formats - https://matplotlib.org/stable/api/dates_api.html
-
-Date ranges - https://www.geeksforgeeks.org/matplotlib-dates-drange-in-python/
+Dates
+-  formats - https://matplotlib.org/stable/api/dates_api.html
+- Date ranges - https://www.geeksforgeeks.org/matplotlib-dates-drange-in-python/
+- other date info - https://matplotlib.org/stable/api/dates_api.html#module-matplotlib.dates
 
 `%matplotlib inline` - for jupyter notebooks plotting
 
@@ -972,20 +975,29 @@ Findall li in ul
 
 Scraping twitter - https://proxyscrape.com/blog/how-to-scrape-twitter-using-python/
 
-
-Beautiful Soup Docs - https://beautiful-soup-4.readthedocs.io/en/latest/
 Scrapy Docs - https://doc.scrapy.org/en/latest/index.html
 
 Articles
 - 24 best free & paid scrapers - https://www.scrapehero.com/top-free-and-paid-web-scraping-tools-and-software/
 
-https://www.scrapehero.com/scrape-alibaba-using-scrapy/
-		○ Scraping tutorial - https://www.geeksforgeeks.org/python-web-scraping-tutorial/
-		○ Scrape hero - https://www.scrapehero.com/how-to-build-and-run-scrapers-on-a-large-scale/
+- https://www.scrapehero.com/scrape-alibaba-using-scrapy/
+ 
+- https://www.geeksforgeeks.org/python-web-scraping-tutorial/
+ 
+- https://www.scrapehero.com/how-to-build-and-run-scrapers-on-a-large-scale/
 
 Listly - https://saraametwalli.medium.com/speed-up-your-data-collection-with-listly-f09827a8dddb
 - add-on to web browsers
 - helps w/ scraping
+
+
+Scraping with Pandas - https://medium.com/gustavorsantos/web-scraping-with-pandas-8a0f86035971
+- Needs to be tables for it to draw any data from the page
+
+---
+### Beautiful Soup
+
+Docs - https://beautiful-soup-4.readthedocs.io/en/latest/
 
 
 
@@ -1122,6 +1134,11 @@ DALLE-2 vs Midjourney vs StableDiffusion - https://tinyurl.com/3fyfrrj4
 Deepfake AI video - https://twitter.com/TedsLittleDream/status/1562836627885416449?s=20&t=xo_Zi6PrLsbp5O73YjKmDg
 - Check out how she made this, apps etc
 
+---
+### XGBoost
+
+- https://www.datacamp.com/tutorial/xgboost-in-python
+- https://machinelearningmastery.com/feature-importance-and-feature-selection-with-xgboost-in-python/
 
 
 # Mapping
