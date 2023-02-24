@@ -408,7 +408,12 @@ Filtering dataframes
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmax.html
 
 .iloc 
-- `.iloc[:, 1:]` - selects the last row
+- `data.iloc[:, 0:2]`
+  - first two columns of data frame with all rows
+- `.iloc[:, 1:]` 
+  - last row, all columns
+- `df.iloc[-51:-1]` 
+  - selects 'last' 50 rows
 
 .insert
 - `.insert(loc=1, column='City', value=city)`
@@ -760,8 +765,15 @@ Removing $ sign from data columns
 # Data Viz
 
 ### *Matplotlib*
+
 quickstart guide 
 - https://matplotlib.org/stable/tutorials/introductory/quick_start.html#sphx-glr-tutorials-introductory-quick-start-py
+
+Annotations - https://matplotlib.org/stable/tutorials/text/annotations.html
+
+Date formats - https://matplotlib.org/stable/api/dates_api.html
+
+Date ranges - https://www.geeksforgeeks.org/matplotlib-dates-drange-in-python/
 
 `%matplotlib inline` - for jupyter notebooks plotting
 
@@ -820,16 +832,21 @@ Figure Factory (Plotly)
 - Getting started = https://docs.streamlit.io/library/get-started
 - Create an app - https://docs.streamlit.io/library/get-started/create-an-app
 - Main concepts - https://docs.streamlit.io/library/get-started/main-concepts
+- Run from jupyter notebook - https://dev.to/surendraredd/streamlit-code-running-from-jupyter-notebook-4olc
+- Run in vscode - https://medium.com/geekculture/how-to-run-your-streamlit-apps-in-vscode-3417da669fc
+- Excel sheet interactive - 
+https://medium.com/@vishaltyagi.dev098/excel-sheet-interactive-dashboard-python-streamlit-114f7c240fc8
 - API reference docs - https://docs.streamlit.io/library/api-reference
 	- St.write() - https://docs.streamlit.io/library/api-reference/write-magic/st.write
 	- Magic - https://docs.streamlit.io/library/api-reference/write-magic/magic
 - *Articles*
 	- Awesome streamlit - https://awesome-streamlit.readthedocs.io/en/latest/_copy_of_project_root/README.html
-	- Peruse for info, help etc..
+	  - Peruse for info, help etc..
 	- Getting started w/ stock charts - https://medium.com/geekculture/getting-started-with-streamlit-ed81eafcb298
 		- References yfinance 
 	- Cannot be instantiated - https://github.com/streamlit/streamlit/issues/5140
 	- In depth intro - https://medium.com/towards-data-science/streamlit-101-an-in-depth-introduction-fc8aad9492f2
+	- Multi page streamlit app - https://towardsdatascience.com/a-multi-page-interactive-dashboard-with-streamlit-and-plotly-c3182443871a
 
 
 ### *Grafana*
