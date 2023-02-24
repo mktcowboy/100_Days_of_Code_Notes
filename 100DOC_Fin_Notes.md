@@ -40,3 +40,20 @@ https://medium.com/@django2618/mastering-scalping-a-step-by-step-guide-to-implem
 http://b.scsi.to/ - Fin data sets need to DL
 
 https://quantocracy.com/ - Quant articles 
+
+
+https://statomics.github.io/StateSpaceCrypto/index.html
+
+See charts for data - https://futures.tradingcharts.com/
+
+Quant resources- https://quantpedia.com/links-tools/?category=historical-data
+
+git list - https://twitter.com/wifeyalpha/status/1492575034761744386?s=46&t=Kdq21M7iF7doZA6Y8zzjWw 
+ - https://github.com/wilsonfreitas/awesome-quant
+ - https://github.com/r0f1/datascience
+ - https://github.com/ranaroussi/quantstats
+ - https://gist.github.com/ih2502mk/50d8f7feb614c8676383431b056f4291
+ - https://github.com/firmai/machine-learning-asset-management/blob/master/README.md
+ - https://github.com/ageron/handson-ml2
+ - https://github.com/hudson-and-thames/mlfinlab
+ - https://github.com/Jam3/math-as-code/blob/master/PYTHON-README.md

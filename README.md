@@ -35,6 +35,7 @@
 	- [ChatGPT](100DOC_Notes.md##chatgpt)
 	- [OpenCV](100DOC_Notes.md##opencv)
 	- [Image Processing](100DOC_Notes.md##image-processing)
+	- [XGBoost](100DOC_Notes.md##xgboost)
 - [Mapping](100DOC_Notes.md#mapping)
 - [Image Processing](100DOC_Notes.md#image-processing)
 - [OpenCV](100DOC_Notes.md#opencv)
